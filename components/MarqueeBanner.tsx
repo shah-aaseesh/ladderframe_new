@@ -1,11 +1,11 @@
 export default function MarqueeBanner() {
   const items = [
-    'DEEP OPERATING EXPERIENCE',
-    'PRACTICAL ADVICE',
-    'STRONGER LEADERSHIP CAPABILITY',
-    'DEEP OPERATING EXPERIENCE',
-    'PRACTICAL ADVICE',
-    'STRONGER LEADERSHIP CAPABILITY',
+    'Deep Operating Experience',
+    'Practical Advice',
+    'Stronger Leadership Capability',
+    'Deep Operating Experience',
+    'Practical Advice',
+    'Stronger Leadership Capability',
   ];
 
   return (

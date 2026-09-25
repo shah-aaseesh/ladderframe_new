@@ -67,7 +67,7 @@ export default function AboutPage() {
       <section className="page-hero">
         <div className="container">
           <div className="eyebrow">About the Firm</div>
-          <h1>EXPERIENCE FROM INSIDE THE BUSINESS.</h1>
+          <h1>Experience from inside the business.</h1>
           <p>
             LadderFrame is a senior advisory partnership led by Anurag Verulkar, bringing 27 years of operating experience, P&amp;L leadership, and senior advisory judgement to leadership teams building the next phase of their business.
           </p>
@@ -79,7 +79,7 @@ export default function AboutPage() {
         <div className="container about-intro-grid">
           <div>
             <div className="eyebrow">The Operating Thesis</div>
-            <h2>LED BY AN OPERATOR WHO HAS BUILT, EXPANDED AND TRANSFORMED BUSINESSES.</h2>
+            <h2>Led by an operator who has built, expanded and transformed businesses.</h2>
           </div>
           <div className="about-intro-copy">
             <p>
@@ -107,7 +107,7 @@ export default function AboutPage() {
         <div className="container">
           <div className="section-header-block">
             <div className="eyebrow">Scale &amp; Track Record</div>
-            <h2 className="section-title">THE SCALE OF EXPERIENCE BROUGHT TO THE TABLE.</h2>
+            <h2 className="section-title">The scale of experience brought to the table.</h2>
             <p className="lead">
               Decades of direct accountability across business building, P&amp;L management, enterprise sales, and organizational transformation.
             </p>
@@ -129,7 +129,7 @@ export default function AboutPage() {
         <div className="container">
           <div className="section-header-block">
             <div className="eyebrow">Operating Stance</div>
-            <h2 className="section-title">STRATEGY HAS TO WORK THROUGH THE BUSINESS.</h2>
+            <h2 className="section-title">Strategy has to work through the business.</h2>
             <p className="lead">
               Growth decisions connect commercial strategy, customer relationships, operating model, people, management cadence and economics. LadderFrame brings these dimensions together so leadership can make choices with a clearer view of the business they are building.
             </p>
@@ -138,7 +138,7 @@ export default function AboutPage() {
           <div className="principles-grid">
             {principles.map((pr, idx) => (
               <div key={idx} className="principle-card">
-                <div style={{ fontFamily: 'var(--font-headline)', fontSize: '0.725rem', fontWeight: 850, letterSpacing: '0.12em', color: 'var(--color-red)', marginBottom: '0.65rem' }}>
+                <div style={{ fontFamily: 'var(--font-headline)', fontSize: '0.725rem', fontWeight: 650, letterSpacing: '0.12em', color: 'var(--color-red)', marginBottom: '0.65rem' }}>
                   {pr.step}
                 </div>
                 <h3>{pr.title}</h3>
@@ -154,7 +154,7 @@ export default function AboutPage() {
         <div className="container">
           <div className="section-header-block">
             <div className="eyebrow">Firm Leadership</div>
-            <h2 className="section-title">EXECUTIVE PROFILE</h2>
+            <h2 className="section-title">Executive Profile</h2>
             <p className="lead">
               Senior advisory stewardship rooted in 27 years of enterprise general management and commercial execution.
             </p>
@@ -189,13 +189,13 @@ export default function AboutPage() {
         <div className="container">
           <div className="cta-inner">
             <div className="eyebrow">Start with the business problem</div>
-            <h2>LET’S TALK.</h2>
+            <h2>Let’s talk.</h2>
             <p>
               Schedule an executive conversation around the growth choices, operating transitions, or enterprise pursuits in front of your business.
             </p>
             <div className="cta-actions">
               <Link href="/contact#start" className="btn btn-primary btn-pill">
-                START A CONVERSATION <span className="btn-arrow">&rarr;</span>
+                Start a Conversation <span className="btn-arrow">&rarr;</span>
               </Link>
             </div>
           </div>

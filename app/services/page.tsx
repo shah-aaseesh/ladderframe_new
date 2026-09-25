@@ -42,7 +42,7 @@ export default function ServicesPage() {
       <section className="page-hero">
         <div className="container">
           <div className="eyebrow">Services &amp; Capabilities</div>
-          <h1>SIX CAPABILITIES. ONE CONNECTED GROWTH AGENDA.</h1>
+          <h1>Six capabilities. One connected growth agenda.</h1>
           <p>
             Each capability answers a strategic business question as an organisation enters its next phase. Explore the practice ledger below to see where LadderFrame focuses, what leadership works through, and the delivered outcomes.
           </p>
@@ -61,7 +61,7 @@ export default function ServicesPage() {
         <div className="container">
           <div className="section-header-block">
             <div className="eyebrow">Strategic Enterprise Pursuit</div>
-            <h2 className="section-title">CRAFT FOR COMPLEX PURSUITS.</h2>
+            <h2 className="section-title">CRAFT for complex pursuits.</h2>
             <p className="lead">
               For strategically vital enterprise opportunities ($5M–$200M+), LadderFrame deploys a disciplined pursuit framework across five mission-critical pillars:
             </p>
@@ -84,7 +84,7 @@ export default function ServicesPage() {
         <div className="container">
           <div className="section-header-block">
             <div className="eyebrow">Selected Work</div>
-            <h2 className="section-title">FOUR BUSINESS SITUATIONS. ONE ADVISORY APPROACH.</h2>
+            <h2 className="section-title">Four business situations. One advisory approach.</h2>
             <p className="lead">
               Customer identities are anonymised. These examples demonstrate how our capabilities combine in active executive contexts.
             </p>
@@ -141,13 +141,13 @@ export default function ServicesPage() {
         <div className="container">
           <div className="cta-inner">
             <div className="eyebrow">Start with the business problem</div>
-            <h2>LET’S TALK.</h2>
+            <h2>Let’s talk.</h2>
             <p>
               Discuss how these capabilities apply to your current growth inflection point, enterprise pursuits, or operating roadmap.
             </p>
             <div className="cta-actions">
               <Link href="/contact#start" className="btn btn-primary btn-pill">
-                START A CONVERSATION <span className="btn-arrow">&rarr;</span>
+                Start a Conversation <span className="btn-arrow">&rarr;</span>
               </Link>
             </div>
           </div>

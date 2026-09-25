@@ -18,17 +18,17 @@ export default function HomePage() {
             {/* Left Column: Core Advisory Statement */}
             <div className="hero-copy">
               <div className="eyebrow">LadderFrame Advisors</div>
-              <h1>ADVISORY FOR THE NEXT PHASE OF <span>GROWTH.</span></h1>
+              <h1>Advisory for the next phase of <span>growth.</span></h1>
               <p>
                 We work with CEOs and leadership teams when a business is entering its next phase and the decisions around growth, markets, major opportunities, operating capability and economics need greater clarity and senior attention.
               </p>
 
               <div className="hero-actions-group">
                 <Link href="/contact#start" className="btn btn-primary">
-                  LET’S TALK <span className="btn-arrow">&rarr;</span>
+                  Let’s Talk <span className="btn-arrow">&rarr;</span>
                 </Link>
                 <Link href="/services" className="btn btn-secondary">
-                  EXPLORE CAPABILITIES
+                  Explore Capabilities
                 </Link>
               </div>
             </div>
@@ -96,7 +96,7 @@ export default function HomePage() {
         <div className="container">
           <div className="section-header-block">
             <div className="eyebrow">Who we work with</div>
-            <h2 className="section-title">LEADERS BUILDING WHAT COMES NEXT.</h2>
+            <h2 className="section-title">Leaders building what comes next.</h2>
             <p className="lead">
               LadderFrame is most relevant to businesses where growth is creating a new level of commercial, operating or leadership complexity.
             </p>
@@ -135,7 +135,7 @@ export default function HomePage() {
         <div className="container">
           <div className="section-header-block">
             <div className="eyebrow">The growth inflection</div>
-            <h2 className="section-title">WHEN THE BUSINESS CHANGES, THE QUESTIONS CHANGE.</h2>
+            <h2 className="section-title">When the business changes, the questions change.</h2>
             <p className="lead">
               As a business scales, the strategic, commercial, and operational questions facing leadership evolve fundamentally at every inflection point.
             </p>
@@ -222,7 +222,7 @@ export default function HomePage() {
         <div className="container proposition-layout">
           <div className="proposition-statement">
             <div className="eyebrow">The proposition</div>
-            <h2>WE HELP LEADERSHIP TEAMS MAKE THE DECISIONS BEHIND THE GROWTH NUMBER.</h2>
+            <h2>We help leadership teams make the decisions behind the growth number.</h2>
           </div>
           <div className="proposition-copy">
             <p>
@@ -240,7 +240,7 @@ export default function HomePage() {
         <div className="container">
           <div className="section-header-block">
             <div className="eyebrow">What we help with</div>
-            <h2 className="section-title">SIX CAPABILITIES. ONE GROWTH AGENDA.</h2>
+            <h2 className="section-title">Six capabilities. One growth agenda.</h2>
             <p className="lead">
               Each capability answers a business question. Together they provide the connected advisory lens required for the next phase.
             </p>
@@ -309,7 +309,7 @@ export default function HomePage() {
         <div className="container">
           <div className="section-header-block">
             <div className="eyebrow">Selected work</div>
-            <h2 className="section-title">HOW THE CAPABILITIES ARE APPLIED.</h2>
+            <h2 className="section-title">How the capabilities are applied.</h2>
             <p className="lead">
               Customer identities are anonymised. The examples show the kinds of business situations LadderFrame works alongside.
             </p>
@@ -371,7 +371,7 @@ export default function HomePage() {
             {/* Left Column: Strategic Stance & Mandate */}
             <div className="engage-mandate-column">
               <div className="eyebrow">How we engage</div>
-              <h2 className="section-title">A SENIOR ADVISORY RELATIONSHIP, BUILT AROUND THE BUSINESS.</h2>
+              <h2 className="section-title">A senior advisory relationship, built around the business.</h2>
               <p className="lead">
                 We work directly with executive leadership through an active, structured cadence &mdash; moving from baseline diagnosis to permanent capability enablement.
               </p>
@@ -443,13 +443,13 @@ export default function HomePage() {
         <div className="container">
           <div className="cta-inner">
             <div className="eyebrow">Start with the business problem</div>
-            <h2>LET’S TALK.</h2>
+            <h2>Let’s talk.</h2>
             <p>
               Bring the business situation as it stands &mdash; a growth question, market opportunity, strategic pursuit, operating-model decision, AI opportunity or performance challenge.
             </p>
             <div className="cta-actions">
               <Link href="/contact#start" className="btn btn-primary btn-pill">
-                START A CONVERSATION <span className="btn-arrow">&rarr;</span>
+                Start a Conversation <span className="btn-arrow">&rarr;</span>
               </Link>
             </div>
           </div>

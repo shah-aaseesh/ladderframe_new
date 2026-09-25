@@ -36,7 +36,7 @@ export default function ContactPage() {
           {/* Header Tier */}
           <div className="contact-hero-header">
             <div className="eyebrow">Direct Advisory Engagement</div>
-            <h1 className="contact-hero-title">START WITH THE STRATEGIC QUESTION.</h1>
+            <h1 className="contact-hero-title">Start with the strategic question.</h1>
             <p className="contact-hero-lead">
               LadderFrame engages directly with CEOs, Founders, Board Directors, and Growth Leaders. There are no junior intermediaries or intake funnels. Connect directly with Anurag Verulkar to evaluate strategic fit, board mandates, or commercial growth priorities.
             </p>
@@ -49,7 +49,7 @@ export default function ContactPage() {
               {/* Header Tier: Practice Leadership */}
               <div className="dossier-header-tier">
                 <div className="executive-role-tag">Practice Leader &bull; Direct Access</div>
-                <h2 className="executive-name">ANURAG VERULKAR</h2>
+                <h2 className="executive-name">Anurag Verulkar</h2>
                 <div className="executive-title-sub">Founder &amp; Senior Advisory Partner &bull; LadderFrame Advisors</div>
               </div>
 
@@ -122,7 +122,7 @@ export default function ContactPage() {
         <div className="container">
           <div className="section-header-block">
             <div className="eyebrow">Engagement Blueprint</div>
-            <h2 className="section-title">WHAT HAPPENS NEXT.</h2>
+            <h2 className="section-title">What happens next.</h2>
             <p className="lead">
               Our initial cadence is structured to give leadership rapid clarity without prolonged friction or unnecessary overhead.
             </p>

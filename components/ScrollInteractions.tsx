@@ -29,11 +29,22 @@ export default function ScrollInteractions() {
 
   // 2. IntersectionObserver for Reveal Animations & Animated Counters on Route Change
   useEffect(() => {
-    // Select animatable cards and sections
+    // Check for reduced motion preference
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Direct counter observer
+    const triggerCounters = (container: Element | Document) => {
+      const counterElements = container.querySelectorAll('.exp-metric-num[data-target], .num[data-target], .big[data-target]');
+      counterElements.forEach((counterEl) => animateCounter(counterEl as HTMLElement));
+    };
+
+    if (prefersReducedMotion) {
+      triggerCounters(document);
+      return;
+    }
+
+    // Select animatable cards and offscreen blocks (exclude hero so hero is always visible)
     const targetSelectors = [
-      '.section-header-block',
-      '.hero-copy',
-      '.hero-visual-frame',
       '.proof-item',
       '.segment-col',
       '.inflection-row',
@@ -53,42 +64,49 @@ export default function ScrollInteractions() {
     ];
 
     const elements = document.querySelectorAll(targetSelectors.join(', '));
-    
-    elements.forEach((el, idx) => {
-      if (!el.classList.contains('reveal-init')) {
-        el.classList.add('reveal-init');
-        // Add stagger class if sibling
-        const siblingIndex = idx % 5;
-        if (siblingIndex > 0) {
-          el.classList.add(`stagger-${siblingIndex}`);
-        }
-      }
-    });
+    const vh = window.innerHeight || document.documentElement.clientHeight;
 
     const revealObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('reveal-visible');
-            // Trigger counters inside if present
-            const counterElements = entry.target.querySelectorAll('.exp-metric-num[data-target], .num[data-target], .big[data-target]');
-            counterElements.forEach((counterEl) => animateCounter(counterEl as HTMLElement));
+            triggerCounters(entry.target);
             revealObserver.unobserve(entry.target);
           }
         });
       },
       {
-        threshold: 0.12,
-        rootMargin: '0px 0px -40px 0px',
+        threshold: 0.05,
+        rootMargin: '50px 0px -20px 0px',
       }
     );
 
-    elements.forEach((el) => revealObserver.observe(el));
+    elements.forEach((el, idx) => {
+      const rect = el.getBoundingClientRect();
+      // If already in or near the viewport on mount, make visible immediately
+      if (rect.top < vh + 100) {
+        el.classList.add('reveal-visible');
+        triggerCounters(el);
+      } else {
+        if (!el.classList.contains('reveal-init')) {
+          el.classList.add('reveal-init');
+          const siblingIndex = idx % 4;
+          if (siblingIndex > 0) {
+            el.classList.add(`stagger-${siblingIndex}`);
+          }
+        }
+        revealObserver.observe(el);
+      }
+    });
 
-    // Also observe any direct counters outside containers
+    // Standalone counters observer
     const standaloneCounters = document.querySelectorAll('.exp-metric-num[data-target], .num[data-target], .big[data-target]');
     standaloneCounters.forEach((c) => {
-      if (!c.closest('.reveal-init')) {
+      const rect = c.getBoundingClientRect();
+      if (rect.top < vh + 100) {
+        animateCounter(c as HTMLElement);
+      } else {
         const counterObserver = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
@@ -98,7 +116,7 @@ export default function ScrollInteractions() {
               }
             });
           },
-          { threshold: 0.2 }
+          { threshold: 0.05 }
         );
         counterObserver.observe(c);
       }
