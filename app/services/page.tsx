@@ -1,156 +1,234 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import ServicesLedger from '@/components/ServicesLedger';
 
 export const metadata: Metadata = {
-  title: 'LadderFrame Advisors — Services & Capabilities',
-  description: 'Six connected advisory capabilities: Growth & Revenue Strategy, Market Expansion, Large Deal Structuring (CRAFT), Operating Model & Organisation, AI & Business Transformation, and Profitability.',
+  title: 'LadderFrame Advisors — Services',
+  description: 'Each capability answers a business question that becomes important as an organisation enters its next phase. The sequence within each capability is deliberate: where LadderFrame focuses → what leadership works through → what the engagement is designed to strengthen.',
 };
 
 export default function ServicesPage() {
-  const craftDimensions = [
+  const services = [
     {
-      letter: 'C',
-      title: 'Conviction',
-      description: 'Building absolute clarity on why we are uniquely positioned to win and establishing unshakeable strategic value for the enterprise client.',
+      code: '01 · GROW',
+      title: 'Growth & Revenue Strategy',
+      question: 'Where will the next growth come from?',
+      focus: 'Growth roadmap, GTM and ICP, segmentation, sales organisation, pricing and revenue planning.',
+      work: 'Growth priorities, commercial model, sales process, revenue analytics and management rhythm.',
+      outcome: 'A prioritised growth agenda, clearer commercial choices and stronger management visibility.',
+      evidence: 'IT Services Company — growth, sales transformation, partnerships and AI strategy.',
     },
     {
-      letter: 'R',
-      title: 'Readiness Intelligence',
-      description: 'Rigorous deal qualification, competitive dynamics modeling, Price-to-Win architecture, and Bid/No-Bid pursuit governance.',
+      code: '02 · EXPAND',
+      title: 'Market Expansion',
+      question: 'Where should we expand?',
+      focus: 'Market assessment, entry strategy, new-segment GTM, customer/partner/channel strategy and competitive positioning.',
+      work: 'Forward integration and adjacency choices, investment logic and route-to-market design.',
+      outcome: 'A clear expansion thesis, practical investment choices and a route to market.',
+      evidence: 'Pharma Distribution Company — forward integration into pharmacy retail.',
     },
     {
-      letter: 'A',
-      title: 'Authenticity',
-      description: 'Aligning commercial promises and value propositions with realistic operating capability, delivery velocity, and risk posture.',
+      code: '03 · WIN',
+      title: 'Large Deal Structuring & Pursuit',
+      question: 'How do we win the opportunities that matter?',
+      focus: 'Account intelligence, stakeholder architecture, competitive positioning, Price-to-Win and proposition architecture.',
+      work: 'Bid/No-Bid discipline, CRAFT pursuit methodology, governance, health reviews and delivery alignment.',
+      outcome: 'A more focused pursuit strategy, stronger stakeholder coverage and alignment between commercial promise and delivery.',
+      evidence: 'IT Services Company — complex growth and enterprise pursuit context.',
     },
     {
-      letter: 'F',
-      title: 'Full Stakeholder Architecture',
-      description: 'Multi-threaded mapping and active coverage across economic decision-makers, executive sponsors, evaluators, and procurement.',
+      code: '04 · BUILD',
+      title: 'Operating Model & Organisation',
+      question: 'What needs to change inside the business?',
+      focus: 'Operating model, organisation structure, decision rights and management cadence.',
+      work: 'Sales/pre-sales processes, critical capabilities, leadership structure and talent priorities.',
+      outcome: 'Clearer accountability, faster decisions and an organisation aligned to the next phase.',
+      evidence: 'Data & AI Platform Company — fractional growth leadership across India & APJ.',
     },
     {
-      letter: 'T',
-      title: 'Team Continuity',
-      description: 'Bridging the transition from sales pursuit to delivery leadership seamlessly to protect margin integrity and relationship trust.',
+      code: '05 · TRANSFORM',
+      title: 'AI & Business Transformation',
+      question: 'How should AI and transformation change the business?',
+      focus: 'AI opportunity assessment, business and revenue strategy, proposition and use-case definition.',
+      work: 'AI-enabled service/offering design, prioritisation, roadmap and commercialisation.',
+      outcome: 'A prioritised transformation agenda linked to measurable business value.',
+      evidence: 'IT Services Company — AI market positioning and AI-enabled service design.',
+    },
+    {
+      code: '06 · PERFORM',
+      title: 'Profitability & Performance',
+      question: 'How do we strengthen the economics of growth?',
+      focus: 'Margin, pricing, commercial terms, delivery economics and cost-to-serve.',
+      work: 'Utilisation, capacity, customer/portfolio economics and performance management rhythm.',
+      outcome: 'Clearer economics, identified value levers and a practical performance agenda.',
+      evidence: 'Pharma Distribution Company — economics alongside forward integration.',
+    },
+  ];
+
+  const cases = [
+    {
+      meta: 'Pharma distribution company',
+      title: 'Forward integration',
+      desc: 'Expansion strategy, retail acquisition and partner development.',
+      outcome: '₹2.65 Cr acquisition completed in 6 weeks; new pharma partners onboarded.',
+      isOutcome: true,
+    },
+    {
+      meta: 'IT services company',
+      title: 'Growth & commercial transformation',
+      desc: 'Sales organisation, partnerships, AI positioning and growth architecture.',
+      outcome: 'Scalable sales engine, partner-led GTM and AI-led proposition.',
+      isOutcome: false,
+    },
+    {
+      meta: 'Agri-tech & rural impact company',
+      title: 'PMF & new growth avenues',
+      desc: 'New business models, integrated dairy ecosystem, fundraising and positioning.',
+      outcome: 'New growth avenues and stronger investor/market narrative.',
+      isOutcome: false,
+    },
+    {
+      meta: 'Data & AI platform company',
+      title: 'Fractional growth leadership',
+      desc: 'India/APJ growth agenda, PMF, GTM, expansion and partnerships.',
+      outcome: 'Establishing the India/APJ growth platform.',
+      isOutcome: false,
     },
   ];
 
   return (
     <>
-      {/* Page Hero (Light Editorial Broadsheet) */}
+      {/* Page Hero */}
       <section className="page-hero">
         <div className="container">
-          <div className="eyebrow">Services &amp; Capabilities</div>
+          <div className="eyebrow">Services</div>
           <h1>Six capabilities. One connected growth agenda.</h1>
           <p>
-            Each capability answers a strategic business question as an organisation enters its next phase. Explore the practice ledger below to see where LadderFrame focuses, what leadership works through, and the delivered outcomes.
+            Each capability answers a business question that becomes important as an organisation enters its next phase. The sequence within each capability is deliberate: where LadderFrame focuses &rarr; what leadership works through &rarr; what the engagement is designed to strengthen.
           </p>
         </div>
       </section>
 
-      {/* Minimalist Executive Ledger */}
-      <section className="section section-services-ledger">
+      {/* The Six Services Flow (Stacking Cards Deck) */}
+      <section className="section services-stack-section">
         <div className="container">
-          <ServicesLedger />
-        </div>
-      </section>
+          <div className="capabilities-stack-deck">
+            {services.map((srv, idx) => (
+              <div 
+                key={idx} 
+                className="capability-stack-card"
+                style={{ '--card-idx': idx } as React.CSSProperties}
+              >
+                <div className="service-dossier-head">
+                  <div className="service-dossier-code">{srv.code}</div>
+                  <div>
+                    <h2>{srv.title}</h2>
+                    <div className="service-dossier-question">{srv.question}</div>
+                  </div>
+                </div>
 
-      {/* Large Deal Advisory: CRAFT Section (Deep Slate Navy) */}
-      <section className="section dark-deep">
-        <div className="container">
-          <div className="section-header-block">
-            <div className="eyebrow">Strategic Enterprise Pursuit</div>
-            <h2 className="section-title">CRAFT for complex pursuits.</h2>
-            <p className="lead">
-              For strategically vital enterprise opportunities ($5M–$200M+), LadderFrame deploys a disciplined pursuit framework across five mission-critical pillars:
-            </p>
-          </div>
+                <div className="service-dossier-blocks">
+                  <div className="service-block-cell">
+                    <div className="block-label">Advisory focus</div>
+                    <p>{srv.focus}</p>
+                  </div>
+                  <div className="service-block-cell">
+                    <div className="block-label">What we work through</div>
+                    <p>{srv.work}</p>
+                  </div>
+                  <div className="service-block-cell outcome-cell">
+                    <div className="block-label">Typical outcome</div>
+                    <p>{srv.outcome}</p>
+                  </div>
+                </div>
 
-          <div className="craft-monogram-grid">
-            {craftDimensions.map((item) => (
-              <div key={item.letter} className="craft-monogram-card">
-                <div className="craft-big-letter">{item.letter}</div>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
+                <div className="service-evidence-strip">
+                  <strong>Selected evidence:</strong> {srv.evidence}
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Selected Engagements Dossier Strip (Warm Sand Canvas) */}
-      <section className="section sand">
+      {/* Large Deal Advisory (CRAFT Framework) */}
+      <section className="section dark">
         <div className="container">
           <div className="section-header-block">
-            <div className="eyebrow">Selected Work</div>
-            <h2 className="section-title">Four business situations. One advisory approach.</h2>
+            <div className="eyebrow">Large deal advisory</div>
+            <h2 className="section-title">CRAFT for complex pursuits.</h2>
             <p className="lead">
-              Customer identities are anonymised. These examples demonstrate how our capabilities combine in active executive contexts.
+              For strategically important enterprise opportunities, LadderFrame brings a structured pursuit lens across Conviction, Readiness Intelligence, Authenticity, Full Stakeholder Architecture and Team Continuity.
             </p>
           </div>
 
-          <div className="case-dossier-layout">
-            <div className="case-hero-dossier">
-              <div className="case-hero-main">
-                <span className="case-tag-lead">Case 01 &bull; Pharma Distribution</span>
-                <h3>Forward integration into pharmacy retail</h3>
-                <p>Advisory around forward integration, retail acquisition logic, commercial terms and partner development for an expanding healthcare and pharmaceutical distribution network.</p>
-              </div>
-              <div className="case-hero-outcome-box">
-                <div className="outcome-label">Delivered Outcome</div>
-                <p>Forward integration into pharmacy retail completed with institutional commercial terms and new pharma partners onboarded.</p>
-                <div className="metric-highlight">₹2.65 Cr &bull; Executed in 6 weeks</div>
-              </div>
+          <div className="craft-grid">
+            <div className="craft-card">
+              <div className="craft-letter">C</div>
+              <div className="craft-title">Conviction</div>
+              <p>Building absolute clarity on why we are positioned to win and the strategic value to the client.</p>
             </div>
-
-            <div className="case-strip-grid">
-              <div className="case-strip-item">
-                <span className="meta">Case 02 &bull; IT Services</span>
-                <h3>Growth, sales transformation &amp; AI</h3>
-                <p>Growth and commercial architecture for a ~₹120 Cr IT services business scaling enterprise pursuits and positioning.</p>
-                <div className="outcome-subtle">
-                  <strong>Focus:</strong> Scalable sales engine, partner GTM motion and AI market proposition.
-                </div>
-              </div>
-
-              <div className="case-strip-item">
-                <span className="meta">Case 03 &bull; Agri-Tech &amp; Rural Impact</span>
-                <h3>PMF, business models &amp; investor narrative</h3>
-                <p>Advisory across product-market fit, integrated dairy ecosystem, fundraising and strategic market positioning.</p>
-                <div className="outcome-subtle">
-                  <strong>Focus:</strong> New growth avenues and establishing an institutional investor narrative.
-                </div>
-              </div>
-
-              <div className="case-strip-item">
-                <span className="meta">Case 04 &bull; Data &amp; AI Platform</span>
-                <h3>Fractional growth leadership — India &amp; APJ</h3>
-                <p>Embedded leadership across PMF, GTM architecture, expansion, partnerships and investor ecosystem.</p>
-                <div className="outcome-subtle">
-                  <strong>Focus:</strong> Scalable India/APJ growth platform and revenue operations cadence.
-                </div>
-              </div>
+            <div className="craft-card">
+              <div className="craft-letter">R</div>
+              <div className="craft-title">Readiness Intelligence</div>
+              <p>Rigorous qualification, competitive intelligence, and Bid/No-Bid pursuit governance.</p>
+            </div>
+            <div className="craft-card">
+              <div className="craft-letter">A</div>
+              <div className="craft-title">Authenticity</div>
+              <p>Aligning the commercial promise and value proposition with realistic operating capabilities.</p>
+            </div>
+            <div className="craft-card">
+              <div className="craft-letter">F</div>
+              <div className="craft-title">Full Stakeholder Architecture</div>
+              <p>Mapping and engaging decision-makers, influencers, procurement, and executive sponsors.</p>
+            </div>
+            <div className="craft-card">
+              <div className="craft-letter">T</div>
+              <div className="craft-title">Team Continuity</div>
+              <p>Bridging the transition from sales pursuit to delivery leadership seamlessly.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Final CTA (Executive Conversion) */}
-      <section className="section-cta">
+      {/* Selected Engagements */}
+      <section className="section light">
         <div className="container">
-          <div className="cta-inner">
-            <div className="eyebrow">Start with the business problem</div>
-            <h2>Let’s talk.</h2>
-            <p>
-              Discuss how these capabilities apply to your current growth inflection point, enterprise pursuits, or operating roadmap.
-            </p>
-            <div className="cta-actions">
-              <Link href="/contact#start" className="btn btn-primary btn-pill">
-                Start a Conversation <span className="btn-arrow">&rarr;</span>
-              </Link>
-            </div>
+          <div className="section-header-block">
+            <div className="eyebrow">Selected engagements</div>
+            <h2 className="section-title">Four business situations. One advisory approach.</h2>
           </div>
+
+          <div className="case-grid">
+            {cases.map((cs, idx) => (
+              <div key={idx} className="case">
+                <div className="meta">{cs.meta}</div>
+                <h3>{cs.title}</h3>
+                <p>{cs.desc}</p>
+                <div className="outcome">
+                  {cs.isOutcome ? (
+                    <><strong>Outcome:</strong> {cs.outcome}</>
+                  ) : (
+                    <><strong>Current outcome focus:</strong> {cs.outcome}</>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="cta">
+        <div className="container">
+          <div className="eyebrow">Start with the business problem</div>
+          <h2>Let’s talk.</h2>
+          <p>
+            Bring the business situation as it stands — a growth question, market opportunity, strategic pursuit, operating-model decision, AI opportunity or performance challenge.
+          </p>
+          <Link href="/contact#start" className="btn btn-primary">
+            Start a Conversation <span className="btn-arrow">&rarr;</span>
+          </Link>
         </div>
       </section>
     </>

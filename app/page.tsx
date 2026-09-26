@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import MarqueeBanner from '@/components/MarqueeBanner';
 
 export const metadata: Metadata = {
   title: 'LadderFrame Advisors — Home',
@@ -10,7 +9,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      {/* Hero Section (Architectural Split Layout) */}
+      {/* Hero Section */}
       <section className="section hero-home">
         <div className="container">
           <div className="hero-split-grid">
@@ -27,23 +26,18 @@ export default function HomePage() {
                 <Link href="/contact#start" className="btn btn-primary">
                   Let’s Talk <span className="btn-arrow">&rarr;</span>
                 </Link>
-                <Link href="/services" className="btn btn-secondary">
-                  Explore Capabilities
-                </Link>
               </div>
             </div>
 
-            {/* Right Column: Architectural Structural Visual */}
-            <div className="hero-visual-frame">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img 
-                src="/assets/hero-structure.jpg" 
-                alt="LadderFrame Advisors — Strategic Architecture and Operating Foundations" 
-                className="hero-visual-img"
-              />
-              <div className="hero-visual-badge">
-                <span>Strategic Architecture</span>
-                <strong>27 Years Operating Depth</strong>
+            {/* Right Column: Seamless Architectural Visual */}
+            <div className="hero-visual-wrapper">
+              <div className="hero-visual-blend">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img 
+                  src="/assets/hero-structure.jpg" 
+                  alt="LadderFrame Advisors — Strategic Architecture and Operating Foundations" 
+                  className="hero-visual-img"
+                />
               </div>
             </div>
 
@@ -51,10 +45,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Executive Marquee Banner (White on Blue) */}
-      <MarqueeBanner />
-
-      {/* Operating Proof Strip */}
+      {/* Proof Strip */}
       <section className="proof-strip-section" aria-label="Operating Proof">
         <div className="container">
           <div className="proof-grid">
@@ -91,8 +82,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Who We Work With (Warm Sand Ruled Broadsheet) */}
-      <section className="section sand">
+      {/* Who We Work With */}
+      <section className="section light">
         <div className="container">
           <div className="section-header-block">
             <div className="eyebrow">Who we work with</div>
@@ -102,125 +93,85 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="segment-broadsheet">
-            <div className="segment-col">
-              <span className="segment-idx">01</span>
+          <div className="segment-grid">
+            <div className="segment">
               <h3>Founder-led &amp; growth-stage SMBs</h3>
-              <p>Businesses moving from founder-led growth toward a more scalable, structured commercial model.</p>
+              <p>Businesses moving from founder-led growth toward a more scalable growth model.</p>
             </div>
 
-            <div className="segment-col">
-              <span className="segment-idx">02</span>
+            <div className="segment">
               <h3>Technology &amp; IT services</h3>
-              <p>Companies building stronger GTM, enterprise sales engines, partnerships or scaling into new regions.</p>
+              <p>Companies building stronger GTM, enterprise sales, partnerships or new regions.</p>
             </div>
 
-            <div className="segment-col">
-              <span className="segment-idx">03</span>
+            <div className="segment">
               <h3>Data, AI &amp; emerging technology</h3>
-              <p>Businesses translating deep technology capability into commercial market relevance and revenue growth.</p>
+              <p>Businesses translating technology capability into market relevance and growth.</p>
             </div>
 
-            <div className="segment-col">
-              <span className="segment-idx">04</span>
-              <h3>Established enterprises</h3>
-              <p>Business units and divisions entering a critical phase of growth, regional expansion or operating transformation.</p>
+            <div className="segment">
+              <h3>Selected established enterprises</h3>
+              <p>Business units entering a new phase of growth, expansion or transformation.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* The Growth Inflection (Executive Architectural Ledger) */}
-      <section className="section dark">
+      {/* The Growth Inflection */}
+      <section className="section">
         <div className="container">
           <div className="section-header-block">
             <div className="eyebrow">The growth inflection</div>
             <h2 className="section-title">When the business changes, the questions change.</h2>
             <p className="lead">
-              As a business scales, the strategic, commercial, and operational questions facing leadership evolve fundamentally at every inflection point.
+              Leadership needs sharper choices across the areas that determine whether the next phase can be built and sustained.
             </p>
           </div>
 
-          <div className="inflection-ledger">
-            <div className="inflection-row">
-              <div className="inflection-phase">
-                <span className="inflection-num">01 / GROW</span>
-              </div>
-              <div className="inflection-headline">
-                <h3>Where is the next engine of growth?</h3>
-              </div>
-              <div className="inflection-desc">
-                <p>When existing channels mature, leadership must identify whether the next tier comes from enterprise accounts, adjacent verticals, or a sharpened revenue model.</p>
-              </div>
+          <div className="question-grid">
+            <div className="question">
+              <div className="num">01 · GROW</div>
+              <h3>Where will the next growth come from?</h3>
+              <p>Clarify priorities across markets, customers, commercial model and sales execution.</p>
             </div>
 
-            <div className="inflection-row">
-              <div className="inflection-phase">
-                <span className="inflection-num">02 / EXPAND</span>
-              </div>
-              <div className="inflection-headline">
-                <h3>How do we enter new geographies and adjacencies?</h3>
-              </div>
-              <div className="inflection-desc">
-                <p>Expanding into new regional markets (India, APJ, ASEAN) or launching adjacent offerings requires localized GTM playbooks and strategic timing.</p>
-              </div>
+            <div className="question">
+              <div className="num">02 · EXPAND</div>
+              <h3>Where should we expand?</h3>
+              <p>Test new geographies, segments and adjacencies and shape the route to market.</p>
             </div>
 
-            <div className="inflection-row">
-              <div className="inflection-phase">
-                <span className="inflection-num">03 / WIN</span>
-              </div>
-              <div className="inflection-headline">
-                <h3>How do we win and structure larger deals?</h3>
-              </div>
-              <div className="inflection-desc">
-                <p>Transitioning from transactional sales to high-value enterprise contracts ($5M–$200M+) demands executive deal leadership and commercial risk architecture.</p>
-              </div>
+            <div className="question">
+              <div className="num">03 · WIN</div>
+              <h3>How do we win the opportunities that matter?</h3>
+              <p>Bring account intelligence, stakeholder strategy, proposition, pricing and pursuit governance together.</p>
             </div>
 
-            <div className="inflection-row">
-              <div className="inflection-phase">
-                <span className="inflection-num">04 / BUILD</span>
-              </div>
-              <div className="inflection-headline">
-                <h3>Can the organization support the next scale?</h3>
-              </div>
-              <div className="inflection-desc">
-                <p>Structures and leadership bandwidth that worked at early stages frequently constrain growth at the next milestone without intentional realignment.</p>
-              </div>
+            <div className="question">
+              <div className="num">04 · BUILD</div>
+              <h3>What needs to change inside the business?</h3>
+              <p>Align leadership, organisation, decision rights and operating disciplines to the next phase.</p>
             </div>
 
-            <div className="inflection-row">
-              <div className="inflection-phase">
-                <span className="inflection-num">05 / TRANSFORM</span>
-              </div>
-              <div className="inflection-headline">
-                <h3>Where does AI create real business value?</h3>
-              </div>
-              <div className="inflection-desc">
-                <p>Moving past experimentation to identify where AI and digital transformation directly improve operating productivity, delivery speed, and margin health.</p>
-              </div>
+            <div className="question">
+              <div className="num">05 · TRANSFORM</div>
+              <h3>How should AI and transformation create value?</h3>
+              <p>Connect priorities to revenue, customer value, productivity and operating performance.</p>
             </div>
 
-            <div className="inflection-row">
-              <div className="inflection-phase">
-                <span className="inflection-num">06 / PERFORM</span>
-              </div>
-              <div className="inflection-headline">
-                <h3>How do we protect margins as complexity grows?</h3>
-              </div>
-              <div className="inflection-desc">
-                <p>Balancing rapid growth with unit economics, commercial pricing discipline, and operating cost rationalization for sustained financial health.</p>
-              </div>
+            <div className="question">
+              <div className="num">06 · PERFORM</div>
+              <h3>How do we strengthen the economics of growth?</h3>
+              <p>Focus pricing, delivery economics, portfolio choices and performance measures on the growth plan.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* The Proposition (Editorial Broadsheet Split) */}
-      <section className="section">
-        <div className="container proposition-layout">
-          <div className="proposition-statement">
+      {/* The Proposition */}
+      <section className="section light">
+        <div className="container proposition">
+          <div>
             <div className="eyebrow">The proposition</div>
             <h2>We help leadership teams make the decisions behind the growth number.</h2>
           </div>
@@ -235,8 +186,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* What We Help With (Architectural Capability Framework Matrix) */}
-      <section className="section dark-deep">
+      {/* What We Help With */}
+      <section className="section dark">
         <div className="container">
           <div className="section-header-block">
             <div className="eyebrow">What we help with</div>
@@ -246,65 +197,47 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="cap-matrix">
-            <div className="cap-cell">
-              <div className="cap-cell-header">
-                <span className="code">01 &bull; GROW</span>
-                <span className="cap-cell-arrow">&rarr;</span>
-              </div>
+          <div className="cap-grid">
+            <div className="cap">
+              <div className="code">01 · GROW</div>
               <h3>Growth &amp; Revenue Strategy</h3>
-              <p>Define where the next growth will come from and strengthen the commercial engine and cadence behind it.</p>
+              <p>Define where the next growth will come from and strengthen the commercial engine behind it.</p>
             </div>
 
-            <div className="cap-cell">
-              <div className="cap-cell-header">
-                <span className="code">02 &bull; EXPAND</span>
-                <span className="cap-cell-arrow">&rarr;</span>
-              </div>
+            <div className="cap">
+              <div className="code">02 · EXPAND</div>
               <h3>Market Expansion</h3>
-              <p>Assess new geographies, segments and adjacencies and shape a practical, de-risked route to market.</p>
+              <p>Assess new geographies, segments and adjacencies and shape a practical route to market.</p>
             </div>
 
-            <div className="cap-cell">
-              <div className="cap-cell-header">
-                <span className="code">03 &bull; WIN</span>
-                <span className="cap-cell-arrow">&rarr;</span>
-              </div>
+            <div className="cap">
+              <div className="code">03 · WIN</div>
               <h3>Large Deal Structuring &amp; Pursuit</h3>
-              <p>Bring structure, strategy and pursuit governance to strategically important enterprise opportunities.</p>
+              <p>Bring structure to strategically important enterprise opportunities.</p>
             </div>
 
-            <div className="cap-cell">
-              <div className="cap-cell-header">
-                <span className="code">04 &bull; BUILD</span>
-                <span className="cap-cell-arrow">&rarr;</span>
-              </div>
+            <div className="cap">
+              <div className="code">04 · BUILD</div>
               <h3>Operating Model &amp; Organisation</h3>
-              <p>Align the operating model, organisation architecture and management disciplines to the next scale.</p>
+              <p>Align the operating model, organisation and management disciplines to the next scale.</p>
             </div>
 
-            <div className="cap-cell">
-              <div className="cap-cell-header">
-                <span className="code">05 &bull; TRANSFORM</span>
-                <span className="cap-cell-arrow">&rarr;</span>
-              </div>
+            <div className="cap">
+              <div className="code">05 · TRANSFORM</div>
               <h3>AI &amp; Business Transformation</h3>
-              <p>Connect AI and digital transformation priorities directly to measurable business value and revenue.</p>
+              <p>Connect AI and transformation priorities to measurable business value.</p>
             </div>
 
-            <div className="cap-cell">
-              <div className="cap-cell-header">
-                <span className="code">06 &bull; PERFORM</span>
-                <span className="cap-cell-arrow">&rarr;</span>
-              </div>
+            <div className="cap">
+              <div className="code">06 · PERFORM</div>
               <h3>Profitability &amp; Performance</h3>
-              <p>Strengthen the economics of growth across pricing architecture, delivery model and portfolio performance.</p>
+              <p>Strengthen the economics of growth across pricing, delivery and portfolio performance.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Selected Work (Editorial Case Dossiers) */}
+      {/* Selected Work */}
       <section className="section">
         <div className="container">
           <div className="section-header-block">
@@ -315,144 +248,99 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="case-dossier-layout">
-            {/* Featured Primary Case Dossier */}
-            <div className="case-hero-dossier">
-              <div className="case-hero-main">
-                <span className="case-tag-lead">Featured Engagement &bull; Case 01</span>
-                <h3>Forward integration into pharmacy retail</h3>
-                <p>Advisory around forward integration, retail acquisition logic, commercial terms and partner development for an expanding healthcare and pharmaceutical distribution network.</p>
-              </div>
-              <div className="case-hero-outcome-box">
-                <div className="outcome-label">Delivered Outcome</div>
-                <p>Forward integration into pharmacy retail successfully completed with institutional commercial terms and new pharma partners fully onboarded.</p>
-                <div className="metric-highlight">₹2.65 Cr &bull; Executed in 6 weeks</div>
+          <div className="case-grid">
+            <div className="case">
+              <div className="meta">Case 01 · Pharma distribution</div>
+              <h3>Forward integration into pharmacy retail</h3>
+              <p>Advisory around forward integration, retail acquisition and partner development.</p>
+              <div className="outcome">
+                <strong>Outcome:</strong> Forward integration into pharmacy retail completed and new pharma partners onboarded. <strong>₹2.65 Cr · 6 weeks.</strong>
               </div>
             </div>
 
-            {/* Secondary 3-Column Case Dossier Strip */}
-            <div className="case-strip-grid">
-              <div className="case-strip-item">
-                <span className="meta">Case 02 &bull; IT Services</span>
-                <h3>Growth, sales transformation &amp; AI</h3>
-                <p>Growth and commercial architecture for a ~₹120 Cr IT services business scaling enterprise pursuits and positioning.</p>
-                <div className="outcome-subtle">
-                  <strong>Focus:</strong> Scalable sales engine, partner GTM motion and AI market proposition.
-                </div>
+            <div className="case">
+              <div className="meta">Case 02 · IT services</div>
+              <h3>Growth, sales transformation, partnerships &amp; AI</h3>
+              <p>Growth and commercial architecture for a ~₹120 Cr IT services business.</p>
+              <div className="outcome">
+                <strong>Current outcome focus:</strong> Building a scalable sales engine, partner-led GTM motion and AI-led market proposition.
               </div>
+            </div>
 
-              <div className="case-strip-item">
-                <span className="meta">Case 03 &bull; Agri-Tech &amp; Rural Impact</span>
-                <h3>PMF, business models &amp; investor narrative</h3>
-                <p>Advisory across product-market fit, integrated dairy ecosystem, fundraising and strategic market positioning.</p>
-                <div className="outcome-subtle">
-                  <strong>Focus:</strong> New growth avenues and establishing an institutional investor narrative.
-                </div>
+            <div className="case">
+              <div className="meta">Case 03 · Agri-tech &amp; rural impact</div>
+              <h3>PMF, new business models &amp; investor narrative</h3>
+              <p>Advisory across PMF, integrated dairy ecosystem, fundraising and market positioning.</p>
+              <div className="outcome">
+                <strong>Current outcome focus:</strong> Building new growth avenues and a stronger investor and market narrative.
               </div>
+            </div>
 
-              <div className="case-strip-item">
-                <span className="meta">Case 04 &bull; Data &amp; AI Platform</span>
-                <h3>Fractional growth leadership — India &amp; APJ</h3>
-                <p>Embedded leadership across PMF, GTM architecture, expansion, partnerships and investor ecosystem.</p>
-                <div className="outcome-subtle">
-                  <strong>Focus:</strong> Scalable India/APJ growth platform and revenue operations cadence.
-                </div>
+            <div className="case">
+              <div className="meta">Case 04 · Data &amp; AI</div>
+              <h3>Fractional growth leadership — India &amp; APJ</h3>
+              <p>Embedded leadership across PMF, GTM, expansion, partnerships and investor ecosystem.</p>
+              <div className="outcome">
+                <strong>Current outcome focus:</strong> Establishing the India/APJ growth platform.
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* How We Engage (Executive Advisory Progression Architecture) */}
-      <section className="section sand">
+      {/* How We Engage */}
+      <section className="section light">
         <div className="container">
-          <div className="engage-split-layout">
-            
-            {/* Left Column: Strategic Stance & Mandate */}
-            <div className="engage-mandate-column">
-              <div className="eyebrow">How we engage</div>
-              <h2 className="section-title">A senior advisory relationship, built around the business.</h2>
-              <p className="lead">
-                We work directly with executive leadership through an active, structured cadence &mdash; moving from baseline diagnosis to permanent capability enablement.
-              </p>
+          <div className="section-header-block">
+            <div className="eyebrow">How we engage</div>
+            <h2 className="section-title">A senior advisory relationship, built around the business.</h2>
+          </div>
 
-              <div className="engage-stance-box">
-                <span className="stance-label">Our Operating Stance</span>
-                <p>
-                  We don&rsquo;t drop disconnected strategy decks and walk away. We embed with leadership across the full lifecycle until structures, habits, and commercial outcomes are permanently established.
-                </p>
-                <div className="stance-action">
-                  <Link href="/contact#start" className="btn btn-primary btn-pill">
-                    Start a Conversation <span className="btn-arrow">&rarr;</span>
-                  </Link>
-                </div>
-              </div>
+          <div className="steps">
+            <div className="step">
+              <div className="num">01</div>
+              <h4>Diagnose</h4>
+              <p>Understand the business situation and priorities.</p>
             </div>
 
-            {/* Right Column: 5-Stage Architectural Progression */}
-            <div className="engage-stages-column">
-              
-              <div className="engage-stage-row">
-                <div className="engage-stage-num">01</div>
-                <div className="engage-stage-body">
-                  <h3>Diagnose</h3>
-                  <p>Understand the business situation, operational realities, stakeholder dynamics and immediate leadership priorities.</p>
-                </div>
-              </div>
-
-              <div className="engage-stage-row">
-                <div className="engage-stage-num">02</div>
-                <div className="engage-stage-body">
-                  <h3>Advise</h3>
-                  <p>Make strategic choices, critical priorities and commercial trade-offs explicit so leaders act with total conviction.</p>
-                </div>
-              </div>
-
-              <div className="engage-stage-row">
-                <div className="engage-stage-num">03</div>
-                <div className="engage-stage-body">
-                  <h3>Enable</h3>
-                  <p>Build practical operating structures, functional capabilities, accountability cadences and governance mechanisms.</p>
-                </div>
-              </div>
-
-              <div className="engage-stage-row">
-                <div className="engage-stage-num">04</div>
-                <div className="engage-stage-body">
-                  <h3>Challenge &amp; Coach</h3>
-                  <p>Work directly alongside the executives and team leads responsible for progress, testing assumptions and sharpening execution.</p>
-                </div>
-              </div>
-
-              <div className="engage-stage-row">
-                <div className="engage-stage-num">05</div>
-                <div className="engage-stage-body">
-                  <h3>Course-Correct</h3>
-                  <p>Stay close to real-world operating feedback and market shifts as the business scales, protecting margins and trajectory.</p>
-                </div>
-              </div>
-
+            <div className="step">
+              <div className="num">02</div>
+              <h4>Advise</h4>
+              <p>Make choices, priorities and trade-offs explicit.</p>
             </div>
 
+            <div className="step">
+              <div className="num">03</div>
+              <h4>Enable</h4>
+              <p>Build practical structures and capabilities.</p>
+            </div>
+
+            <div className="step">
+              <div className="num">04</div>
+              <h4>Challenge &amp; Coach</h4>
+              <p>Work with the people responsible for progress.</p>
+            </div>
+
+            <div className="step">
+              <div className="num">05</div>
+              <h4>Monitor &amp; Course Correct</h4>
+              <p>Stay close as the business evolves.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Final CTA (Executive Conversion) */}
-      <section className="section-cta">
+      {/* Final CTA */}
+      <section className="cta">
         <div className="container">
-          <div className="cta-inner">
-            <div className="eyebrow">Start with the business problem</div>
-            <h2>Let’s talk.</h2>
-            <p>
-              Bring the business situation as it stands &mdash; a growth question, market opportunity, strategic pursuit, operating-model decision, AI opportunity or performance challenge.
-            </p>
-            <div className="cta-actions">
-              <Link href="/contact#start" className="btn btn-primary btn-pill">
-                Start a Conversation <span className="btn-arrow">&rarr;</span>
-              </Link>
-            </div>
-          </div>
+          <div className="eyebrow">Start with the business problem</div>
+          <h2>Let’s talk.</h2>
+          <p>
+            Bring the business situation as it stands — a growth question, market opportunity, strategic pursuit, operating-model decision, AI opportunity or performance challenge.
+          </p>
+          <Link href="/contact#start" className="btn btn-primary">
+            Start a Conversation <span className="btn-arrow">&rarr;</span>
+          </Link>
         </div>
       </section>
     </>
