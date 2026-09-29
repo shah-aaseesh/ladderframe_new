@@ -49,6 +49,7 @@ export default function Header() {
                   key={link.href}
                   href={link.href} 
                   className={`nav-link ${isActive ? 'active' : ''}`}
+                  onClick={() => setMobileNavOpen(false)}
                 >
                   {link.label}
                 </Link>
@@ -56,7 +57,11 @@ export default function Header() {
             })}
           </nav>
           <div className="header-actions">
-            <Link href="/contact#start" className="btn btn-primary btn-pill">
+            <Link 
+              href="/contact#start" 
+              className="btn btn-primary btn-pill"
+              onClick={() => setMobileNavOpen(false)}
+            >
               Let’s Talk <span className="btn-arrow">&rarr;</span>
             </Link>
           </div>

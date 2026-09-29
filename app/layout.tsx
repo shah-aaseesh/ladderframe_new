@@ -4,6 +4,7 @@ import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ScrollInteractions from '@/components/ScrollInteractions';
+import ScrollToHash from '@/components/ScrollToHash';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -37,6 +38,7 @@ export default function RootLayout({
     <html lang="en" className={`${montserrat.variable} ${inter.variable}`}>
       <body>
         <ScrollInteractions />
+        <ScrollToHash />
         <div className="page-wrapper">
           <div className="editorial-content-frame">
             <Header />

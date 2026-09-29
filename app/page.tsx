@@ -1,27 +1,165 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import ClosingBand from '@/components/ClosingBand';
 
 export const metadata: Metadata = {
-  title: 'LadderFrame Advisors — Home',
-  description: 'We work with CEOs and leadership teams when a business is entering its next phase and the decisions around growth, markets, major opportunities, operating capability and economics need greater clarity and senior attention.',
+  title: 'LadderFrame Advisors — Advisory for the next phase of growth',
+  description: 'For CEOs and leadership teams making the decisions that growth now depends on: where to play, what to win and what to build.',
 };
 
 export default function HomePage() {
+  const sixQuestions = [
+    {
+      label: '01 · Grow',
+      question: 'Where will the next growth come from?',
+      linkText: 'Growth & Revenue Strategy →',
+      href: '/services#grow',
+    },
+    {
+      label: '02 · Expand',
+      question: 'Which markets should we enter, and how?',
+      linkText: 'Market Expansion →',
+      href: '/services#expand',
+    },
+    {
+      label: '03 · Win',
+      question: 'How do we win the deals that matter?',
+      linkText: 'Large Deal Structuring & Pursuit →',
+      href: '/services#win',
+    },
+    {
+      label: '04 · Build',
+      question: 'What has to change inside the business?',
+      linkText: 'Operating Model & Organisation →',
+      href: '/services#build',
+    },
+    {
+      label: '05 · Transform',
+      question: 'Where will AI create real value?',
+      linkText: 'AI & Business Transformation →',
+      href: '/services#transform',
+    },
+    {
+      label: '06 · Perform',
+      question: 'How do we make growth pay?',
+      linkText: 'Profitability & Performance →',
+      href: '/services#perform',
+    },
+  ];
+
+  const whoWeWorkWith = [
+    {
+      title: 'Founder-led & growth-stage companies',
+      text: 'Moving from founder-led growth to a scalable model.',
+    },
+    {
+      title: 'Technology & IT services',
+      text: 'Building GTM, enterprise sales, partnerships or new regions.',
+    },
+    {
+      title: 'Data, AI & emerging tech',
+      text: 'Turning capability into market traction.',
+    },
+    {
+      title: 'Established enterprises',
+      text: 'Business units entering a period of growth, expansion or transformation.',
+    },
+  ];
+
+  const trackRecord = [
+    {
+      figure: '27+',
+      caption: 'Years as an operator in leadership roles',
+    },
+    {
+      figure: '$160M',
+      caption: 'Business built as part of the core leadership & execution team',
+    },
+    {
+      figure: '$100M',
+      caption: 'Portfolios managed in ASEAN & Greater China',
+    },
+    {
+      figure: '₹500 Cr',
+      caption: 'Business transformed in India',
+    },
+    {
+      figure: '$5M–$200M',
+      caption: 'First-of-a-kind & strategic deals',
+    },
+    {
+      figure: '50+ · $2B+',
+      caption: 'Complex enterprise deals · customer lifetime value delivered',
+    },
+  ];
+
+  const selectedWork = [
+    {
+      sector: 'Pharma distribution',
+      status: 'Completed',
+      title: 'Forward integration into pharmacy retail',
+      text: 'Retail acquisition and partner development. ₹2.65 Cr acquisition closed in 6 weeks; new pharma partners onboarded.',
+    },
+    {
+      sector: 'IT services · ~₹120 Cr',
+      status: 'In progress',
+      title: 'Growth & sales transformation',
+      text: 'Sales engine, partner-led GTM and an AI-led proposition.',
+    },
+    {
+      sector: 'Agri-tech & rural impact',
+      status: 'In progress',
+      title: 'New business models & investor narrative',
+      text: 'PMF, an integrated dairy ecosystem and fundraising.',
+    },
+    {
+      sector: 'Data & AI platform',
+      status: 'In progress',
+      title: 'Fractional growth leadership, India & APJ',
+      text: 'GTM, expansion, partnerships and the investor ecosystem.',
+    },
+  ];
+
+  const howWeEngage = [
+    {
+      step: '01',
+      title: 'Diagnose',
+      text: 'Understand the situation.',
+    },
+    {
+      step: '02',
+      title: 'Advise',
+      text: 'Make the choices explicit.',
+    },
+    {
+      step: '03',
+      title: 'Enable',
+      text: 'Build what’s needed.',
+    },
+    {
+      step: '04',
+      title: 'Challenge & Coach',
+      text: 'Work with the people responsible.',
+    },
+    {
+      step: '05',
+      title: 'Monitor & Course-correct',
+      text: 'Stay close as the plan plays out.',
+    },
+  ];
+
   return (
     <>
-      {/* Hero Section */}
+      {/* 1. Hero */}
       <section className="section hero-home">
         <div className="container">
           <div className="hero-split-grid">
-            
-            {/* Left Column: Core Advisory Statement */}
             <div className="hero-copy">
               <div className="eyebrow">LadderFrame Advisors</div>
               <h1>Advisory for the next phase of <span>growth.</span></h1>
               <p>
-                We work with CEOs and leadership teams when a business is entering its next phase and the decisions around growth, markets, major opportunities, operating capability and economics need greater clarity and senior attention.
+                For CEOs and leadership teams making the decisions that growth now depends on: where to play, what to win and what to build.
               </p>
-
               <div className="hero-actions-group">
                 <Link href="/contact#start" className="btn btn-primary">
                   Let’s Talk <span className="btn-arrow">&rarr;</span>
@@ -29,320 +167,171 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right Column: Seamless Architectural Visual */}
             <div className="hero-visual-wrapper">
               <div className="hero-visual-blend">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img 
                   src="/assets/hero-structure.jpg" 
-                  alt="LadderFrame Advisors — Strategic Architecture and Operating Foundations" 
+                  alt="LadderFrame Advisors — Strategic Architecture" 
                   className="hero-visual-img"
                 />
               </div>
             </div>
-
           </div>
         </div>
       </section>
 
-      {/* Proof Strip */}
-      <section className="proof-strip-section" aria-label="Operating Proof">
-        <div className="container">
-          <div className="proof-grid">
-            <div className="proof-item">
-              <div className="num">27+</div>
-              <div className="proof-label">Years as an operator in leadership roles</div>
-            </div>
-
-            <div className="proof-item">
-              <div className="num">$160M</div>
-              <div className="proof-label">Business built as part of the core leadership &amp; execution team</div>
-            </div>
-
-            <div className="proof-item">
-              <div className="num">$100M</div>
-              <div className="proof-label">Portfolios managed in ASEAN–GCN</div>
-            </div>
-
-            <div className="proof-item">
-              <div className="num">₹500 Cr</div>
-              <div className="proof-label">Business transformed in India</div>
-            </div>
-
-            <div className="proof-item">
-              <div className="num">$5M–$200M</div>
-              <div className="proof-label">Multiple FOAK &amp; strategic deals</div>
-            </div>
-
-            <div className="proof-item">
-              <div className="num">50+ · $2B+</div>
-              <div className="proof-label">Complex enterprise deals · customer lifetime value delivered</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Who We Work With */}
-      <section className="section light">
-        <div className="container">
-          <div className="section-header-block">
-            <div className="eyebrow">Who we work with</div>
-            <h2 className="section-title">Leaders building what comes next.</h2>
-            <p className="lead">
-              LadderFrame is most relevant to businesses where growth is creating a new level of commercial, operating or leadership complexity.
-            </p>
-          </div>
-
-          <div className="segment-grid">
-            <div className="segment">
-              <h3>Founder-led &amp; growth-stage SMBs</h3>
-              <p>Businesses moving from founder-led growth toward a more scalable growth model.</p>
-            </div>
-
-            <div className="segment">
-              <h3>Technology &amp; IT services</h3>
-              <p>Companies building stronger GTM, enterprise sales, partnerships or new regions.</p>
-            </div>
-
-            <div className="segment">
-              <h3>Data, AI &amp; emerging technology</h3>
-              <p>Businesses translating technology capability into market relevance and growth.</p>
-            </div>
-
-            <div className="segment">
-              <h3>Selected established enterprises</h3>
-              <p>Business units entering a new phase of growth, expansion or transformation.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* The Growth Inflection */}
-      <section className="section">
-        <div className="container">
-          <div className="section-header-block">
-            <div className="eyebrow">The growth inflection</div>
-            <h2 className="section-title">When the business changes, the questions change.</h2>
-            <p className="lead">
-              Leadership needs sharper choices across the areas that determine whether the next phase can be built and sustained.
-            </p>
-          </div>
-
-          <div className="question-grid">
-            <div className="question">
-              <div className="num">01 · GROW</div>
-              <h3>Where will the next growth come from?</h3>
-              <p>Clarify priorities across markets, customers, commercial model and sales execution.</p>
-            </div>
-
-            <div className="question">
-              <div className="num">02 · EXPAND</div>
-              <h3>Where should we expand?</h3>
-              <p>Test new geographies, segments and adjacencies and shape the route to market.</p>
-            </div>
-
-            <div className="question">
-              <div className="num">03 · WIN</div>
-              <h3>How do we win the opportunities that matter?</h3>
-              <p>Bring account intelligence, stakeholder strategy, proposition, pricing and pursuit governance together.</p>
-            </div>
-
-            <div className="question">
-              <div className="num">04 · BUILD</div>
-              <h3>What needs to change inside the business?</h3>
-              <p>Align leadership, organisation, decision rights and operating disciplines to the next phase.</p>
-            </div>
-
-            <div className="question">
-              <div className="num">05 · TRANSFORM</div>
-              <h3>How should AI and transformation create value?</h3>
-              <p>Connect priorities to revenue, customer value, productivity and operating performance.</p>
-            </div>
-
-            <div className="question">
-              <div className="num">06 · PERFORM</div>
-              <h3>How do we strengthen the economics of growth?</h3>
-              <p>Focus pricing, delivery economics, portfolio choices and performance measures on the growth plan.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* The Proposition */}
-      <section className="section light">
-        <div className="container proposition">
-          <div>
-            <div className="eyebrow">The proposition</div>
-            <h2>We help leadership teams make the decisions behind the growth number.</h2>
-          </div>
-          <div className="proposition-copy">
-            <p>
-              Where to play. How to grow. Where to expand. How to win. What to build. Where AI and transformation can create value. How to strengthen the economics of growth.
-            </p>
-            <p>
-              Our role is practical: <strong>diagnose</strong> the business situation, <strong>advise</strong> on the choices, <strong>enable</strong> the structures and capabilities required, work with the people responsible, and stay close enough to <strong>challenge and course-correct</strong>.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* What We Help With */}
+      {/* 2. Six questions */}
       <section className="section dark">
         <div className="container">
           <div className="section-header-block">
-            <div className="eyebrow">What we help with</div>
-            <h2 className="section-title">Six capabilities. One growth agenda.</h2>
-            <p className="lead">
-              Each capability answers a business question. Together they provide the connected advisory lens required for the next phase.
-            </p>
+            <h2 className="section-title">When the business changes, the questions change.</h2>
           </div>
 
-          <div className="cap-grid">
-            <div className="cap">
-              <div className="code">01 · GROW</div>
-              <h3>Growth &amp; Revenue Strategy</h3>
-              <p>Define where the next growth will come from and strengthen the commercial engine behind it.</p>
-            </div>
-
-            <div className="cap">
-              <div className="code">02 · EXPAND</div>
-              <h3>Market Expansion</h3>
-              <p>Assess new geographies, segments and adjacencies and shape a practical route to market.</p>
-            </div>
-
-            <div className="cap">
-              <div className="code">03 · WIN</div>
-              <h3>Large Deal Structuring &amp; Pursuit</h3>
-              <p>Bring structure to strategically important enterprise opportunities.</p>
-            </div>
-
-            <div className="cap">
-              <div className="code">04 · BUILD</div>
-              <h3>Operating Model &amp; Organisation</h3>
-              <p>Align the operating model, organisation and management disciplines to the next scale.</p>
-            </div>
-
-            <div className="cap">
-              <div className="code">05 · TRANSFORM</div>
-              <h3>AI &amp; Business Transformation</h3>
-              <p>Connect AI and transformation priorities to measurable business value.</p>
-            </div>
-
-            <div className="cap">
-              <div className="code">06 · PERFORM</div>
-              <h3>Profitability &amp; Performance</h3>
-              <p>Strengthen the economics of growth across pricing, delivery and portfolio performance.</p>
-            </div>
+          <div className="question-grid">
+            {sixQuestions.map((item, idx) => (
+              <Link 
+                key={idx} 
+                href={item.href} 
+                className="question"
+                style={{ 
+                  textDecoration: 'none', 
+                  color: 'inherit', 
+                  display: 'flex', 
+                  flexDirection: 'column',
+                  cursor: 'pointer' 
+                }}
+              >
+                <div className="num">{item.label}</div>
+                <h3>{item.question}</h3>
+                <div style={{ marginTop: 'auto', paddingTop: '1rem' }}>
+                  <span style={{ color: 'var(--color-red-light)', textDecoration: 'none', fontWeight: 500, fontSize: '0.95rem' }}>
+                    {item.linkText}
+                  </span>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Selected Work */}
-      <section className="section">
+      {/* 3. Who we work with */}
+      <section className="section sand">
         <div className="container">
           <div className="section-header-block">
-            <div className="eyebrow">Selected work</div>
-            <h2 className="section-title">How the capabilities are applied.</h2>
-            <p className="lead">
-              Customer identities are anonymised. The examples show the kinds of business situations LadderFrame works alongside.
+            <h2 className="section-title">Leaders building what comes next.</h2>
+          </div>
+
+          <div className="segment-grid">
+            {whoWeWorkWith.map((item, idx) => (
+              <div key={idx} className="segment">
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 4. Track record */}
+      <section className="proof-strip-section" aria-label="Founder’s operating track record">
+        <div className="container">
+          <div className="section-header-block" style={{ marginBottom: '2rem' }}>
+            <div className="eyebrow" style={{ color: 'var(--color-red-light)' }}>
+              Founder’s operating track record
+            </div>
+          </div>
+
+          <div className="proof-grid">
+            {trackRecord.map((item, idx) => (
+              <div key={idx} className="proof-item">
+                <div className="num">{item.figure}</div>
+                <div className="proof-label">{item.caption}</div>
+              </div>
+            ))}
+          </div>
+
+          <div style={{ marginTop: '2.5rem', textAlign: 'center' }}>
+            <Link 
+              href="/about" 
+              className="btn"
+              style={{
+                backgroundColor: 'rgba(255, 255, 255, 0.08)',
+                color: '#FFFFFF',
+                border: '1px solid rgba(255, 255, 255, 0.2)',
+                borderRadius: 'var(--radius-pill)',
+                padding: '0.75rem 1.75rem',
+                fontSize: '0.925rem',
+                fontWeight: 500,
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+                textDecoration: 'none'
+              }}
+            >
+              More about our leadership <span className="btn-arrow">&rarr;</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Selected work */}
+      <section className="section white" id="selected-work">
+        <div className="container">
+          <div className="section-header-block">
+            <h2 className="section-title">Selected work</h2>
+            <p className="lead" style={{ fontSize: '0.95rem', fontStyle: 'italic' }}>
+              Note: Client names are anonymised.
             </p>
           </div>
 
           <div className="case-grid">
-            <div className="case">
-              <div className="meta">Case 01 · Pharma distribution</div>
-              <h3>Forward integration into pharmacy retail</h3>
-              <p>Advisory around forward integration, retail acquisition and partner development.</p>
-              <div className="outcome">
-                <strong>Outcome:</strong> Forward integration into pharmacy retail completed and new pharma partners onboarded. <strong>₹2.65 Cr · 6 weeks.</strong>
+            {selectedWork.map((cs, idx) => (
+              <div key={idx} className="case">
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem' }}>
+                  <span className="meta" style={{ marginBottom: 0 }}>{cs.sector}</span>
+                  <span 
+                    style={{ 
+                      fontSize: '0.75rem', 
+                      fontWeight: 600, 
+                      padding: '0.2rem 0.6rem', 
+                      borderRadius: 'var(--radius-pill)',
+                      backgroundColor: cs.status === 'Completed' ? 'rgba(16, 185, 129, 0.12)' : 'rgba(245, 158, 11, 0.12)',
+                      color: cs.status === 'Completed' ? '#059669' : '#D97706'
+                    }}
+                  >
+                    {cs.status}
+                  </span>
+                </div>
+                <h3>{cs.title}</h3>
+                <p>{cs.text}</p>
               </div>
-            </div>
-
-            <div className="case">
-              <div className="meta">Case 02 · IT services</div>
-              <h3>Growth, sales transformation, partnerships &amp; AI</h3>
-              <p>Growth and commercial architecture for a ~₹120 Cr IT services business.</p>
-              <div className="outcome">
-                <strong>Current outcome focus:</strong> Building a scalable sales engine, partner-led GTM motion and AI-led market proposition.
-              </div>
-            </div>
-
-            <div className="case">
-              <div className="meta">Case 03 · Agri-tech &amp; rural impact</div>
-              <h3>PMF, new business models &amp; investor narrative</h3>
-              <p>Advisory across PMF, integrated dairy ecosystem, fundraising and market positioning.</p>
-              <div className="outcome">
-                <strong>Current outcome focus:</strong> Building new growth avenues and a stronger investor and market narrative.
-              </div>
-            </div>
-
-            <div className="case">
-              <div className="meta">Case 04 · Data &amp; AI</div>
-              <h3>Fractional growth leadership — India &amp; APJ</h3>
-              <p>Embedded leadership across PMF, GTM, expansion, partnerships and investor ecosystem.</p>
-              <div className="outcome">
-                <strong>Current outcome focus:</strong> Establishing the India/APJ growth platform.
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* How We Engage */}
-      <section className="section light">
+      {/* 6. How we engage */}
+      <section className="section sand">
         <div className="container">
           <div className="section-header-block">
-            <div className="eyebrow">How we engage</div>
-            <h2 className="section-title">A senior advisory relationship, built around the business.</h2>
+            <h2 className="section-title">How we engage</h2>
           </div>
 
           <div className="steps">
-            <div className="step">
-              <div className="num">01</div>
-              <h4>Diagnose</h4>
-              <p>Understand the business situation and priorities.</p>
-            </div>
-
-            <div className="step">
-              <div className="num">02</div>
-              <h4>Advise</h4>
-              <p>Make choices, priorities and trade-offs explicit.</p>
-            </div>
-
-            <div className="step">
-              <div className="num">03</div>
-              <h4>Enable</h4>
-              <p>Build practical structures and capabilities.</p>
-            </div>
-
-            <div className="step">
-              <div className="num">04</div>
-              <h4>Challenge &amp; Coach</h4>
-              <p>Work with the people responsible for progress.</p>
-            </div>
-
-            <div className="step">
-              <div className="num">05</div>
-              <h4>Monitor &amp; Course Correct</h4>
-              <p>Stay close as the business evolves.</p>
-            </div>
+            {howWeEngage.map((st, idx) => (
+              <div key={idx} className="step">
+                <div className="num">{st.step}</div>
+                <h4>{st.title}</h4>
+                <p>{st.text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="cta">
-        <div className="container">
-          <div className="eyebrow">Start with the business problem</div>
-          <h2>Let’s talk.</h2>
-          <p>
-            Bring the business situation as it stands — a growth question, market opportunity, strategic pursuit, operating-model decision, AI opportunity or performance challenge.
-          </p>
-          <Link href="/contact#start" className="btn btn-primary">
-            Start a Conversation <span className="btn-arrow">&rarr;</span>
-          </Link>
-        </div>
-      </section>
+      {/* 7. Closing band */}
+      <ClosingBand />
     </>
   );
 }
