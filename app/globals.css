@@ -482,35 +482,43 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    z-index: 1001;
+    position: relative;
+    pointer-events: auto;
   }
 
   .nav-links-wrap {
     position: fixed;
-    top: 64px;
+    top: 60px;
     left: 0;
     right: 0;
     background: rgba(250, 248, 245, 0.98);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--color-border-divider);
-    padding: 1.75rem 1.5rem 2.25rem;
+    padding: 1.5rem 1.5rem 2rem;
     flex-direction: column;
     align-items: stretch;
-    gap: 1.5rem;
-    transform: translateY(-110%);
+    gap: 1.25rem;
+    transform: translateY(-120%);
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.1);
-    max-height: calc(100vh - 64px);
+    pointer-events: none;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease, visibility 0.25s ease;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+    max-height: calc(100vh - 60px);
     overflow-y: auto;
     z-index: 999;
   }
 
-  .nav-links-wrap.nav-open {
-    transform: translateY(0);
-    opacity: 1;
-    visibility: visible;
+  .nav-links-wrap.nav-open,
+  .nav-links-wrap.open {
+    display: flex !important;
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
   }
 
   .nav-links {
@@ -2674,45 +2682,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  .nav-links-wrap {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: var(--color-bg-canvas);
-    border-bottom: 1px solid var(--color-border-divider);
-    padding: 1.5rem 1.25rem;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.25rem;
-    box-shadow: var(--shadow-elevated);
-  }
-  
-  .nav-links-wrap.open {
-    display: flex;
-  }
-  
-  .nav-links {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-    width: 100%;
-  }
-  
-  .header-actions {
-    width: 100%;
-    margin-top: 0.5rem;
-  }
-  
-  .header-actions .btn {
-    width: 100%;
-  }
-  
-  .mobile-nav-toggle {
-    display: block;
-  }
-  
   .proof-grid {
     grid-template-columns: repeat(2, 1fr);
   }

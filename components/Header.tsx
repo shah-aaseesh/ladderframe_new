@@ -40,7 +40,7 @@ export default function Header() {
           </Link>
         </div>
 
-        <div className={`nav-links-wrap ${mobileNavOpen ? 'nav-open' : ''}`} id="navLinksWrap">
+        <div className={`nav-links-wrap ${mobileNavOpen ? 'nav-open open' : ''}`} id="navLinksWrap">
           <nav className="nav-links" aria-label="Main Navigation">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
@@ -68,6 +68,7 @@ export default function Header() {
         </div>
 
         <button 
+          type="button"
           className="mobile-nav-toggle" 
           onClick={() => setMobileNavOpen(!mobileNavOpen)}
           aria-label="Toggle navigation menu" 
