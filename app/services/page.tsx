@@ -3,8 +3,8 @@ import Link from 'next/link';
 import ClosingBand from '@/components/ClosingBand';
 
 export const metadata: Metadata = {
-  title: 'Services — LadderFrame Advisors',
-  description: 'Six capabilities. One connected growth agenda. Each capability answers one business question. Use them alone or together.',
+  title: 'Advisory Capabilities & Services — LadderFrame Advisors',
+  description: 'Six connected advisory capabilities: Growth & revenue strategy, market expansion, large enterprise pursuits, operating models, AI transformation, and performance.',
 };
 
 export default function ServicesPage() {
@@ -14,10 +14,16 @@ export default function ServicesPage() {
       label: '01 · Grow',
       name: 'Growth & Revenue Strategy',
       question: 'Where will the next growth come from?',
-      caseLink: {
-        text: 'Case: IT services growth & sales transformation →',
-        href: '/#selected-work',
-      },
+      caseLinks: [
+        {
+          text: 'Case: IT services growth & sales transformation',
+          href: '/#case-it-services',
+        },
+        {
+          text: 'Case: Agri-tech new business models & investor narrative',
+          href: '/#case-agri-tech',
+        },
+      ],
       whatWeCover: 'Growth roadmap, ICP and segmentation, GTM, sales organisation, pricing and revenue planning.',
       whatYouGet: 'A prioritised growth agenda and clear visibility of the revenue engine.',
     },
@@ -26,10 +32,16 @@ export default function ServicesPage() {
       label: '02 · Expand',
       name: 'Market Expansion',
       question: 'Which markets should we enter, and how?',
-      caseLink: {
-        text: 'Case: Pharma forward integration →',
-        href: '/#selected-work',
-      },
+      caseLinks: [
+        {
+          text: 'Case: Pharma forward integration',
+          href: '/#case-pharma',
+        },
+        {
+          text: 'Case: Fractional growth leadership',
+          href: '/#case-fractional',
+        },
+      ],
       whatWeCover: 'Market assessment, entry strategy, adjacencies, partner and channel strategy, competitive positioning.',
       whatYouGet: 'A clear expansion case, the investment it needs and a route to market.',
     },
@@ -38,7 +50,7 @@ export default function ServicesPage() {
       label: '03 · Win',
       name: 'Large Deal Structuring & Pursuit',
       question: 'How do we win the deals that matter?',
-      caseLink: null,
+      caseLinks: [],
       whatWeCover: 'Account intelligence, stakeholder mapping, Price-to-Win, proposition, Bid/No-Bid and pursuit governance using CRAFT.',
       whatYouGet: 'A focused pursuit, full stakeholder coverage and a deal your delivery team can honour.',
     },
@@ -47,10 +59,7 @@ export default function ServicesPage() {
       label: '04 · Build',
       name: 'Operating Model & Organisation',
       question: 'What has to change inside the business?',
-      caseLink: {
-        text: 'Case: Fractional growth leadership →',
-        href: '/#selected-work',
-      },
+      caseLinks: [],
       whatWeCover: 'Operating model, structure, decision rights, management cadence, sales and pre-sales process, leadership and talent.',
       whatYouGet: 'Clear accountability and faster decisions.',
     },
@@ -59,10 +68,12 @@ export default function ServicesPage() {
       label: '05 · Transform',
       name: 'AI & Business Transformation',
       question: 'Where will AI create real value?',
-      caseLink: {
-        text: 'Case: IT services AI proposition →',
-        href: '/#selected-work',
-      },
+      caseLinks: [
+        {
+          text: 'Case: IT services AI proposition',
+          href: '/#case-it-services',
+        },
+      ],
       whatWeCover: 'AI opportunity assessment, use cases, AI-enabled offerings, roadmap and commercialisation.',
       whatYouGet: 'A prioritised AI agenda tied to revenue, margin or productivity.',
     },
@@ -71,7 +82,7 @@ export default function ServicesPage() {
       label: '06 · Perform',
       name: 'Profitability & Performance',
       question: 'How do we make growth pay?',
-      caseLink: null,
+      caseLinks: [],
       whatWeCover: 'Pricing, margin, commercial terms, delivery economics, utilisation, cost-to-serve and portfolio economics.',
       whatYouGet: 'Clear economics, the right value levers and a rhythm for tracking them.',
     },
@@ -85,7 +96,7 @@ export default function ServicesPage() {
     },
     {
       letter: 'R',
-      title: 'Readiness Intelligence',
+      title: 'Readiness',
       text: 'Qualification, competitive intelligence and Bid/No-Bid discipline.',
     },
     {
@@ -95,7 +106,7 @@ export default function ServicesPage() {
     },
     {
       letter: 'F',
-      title: 'Full Stakeholder Architecture',
+      title: 'Full Stakeholder Coverage',
       text: 'Every decision-maker, influencer and sponsor mapped and engaged.',
     },
     {
@@ -148,14 +159,18 @@ export default function ServicesPage() {
                   </div>
                 </div>
 
-                {srv.caseLink && (
-                  <div className="service-evidence-strip">
-                    <Link 
-                      href={srv.caseLink.href}
-                      style={{ color: 'var(--color-navy)', textDecoration: 'none', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}
-                    >
-                      {srv.caseLink.text}
-                    </Link>
+                {srv.caseLinks && srv.caseLinks.length > 0 && (
+                  <div className="service-cases-deck">
+                    {srv.caseLinks.map((link, lIdx) => (
+                      <Link 
+                        key={lIdx}
+                        href={link.href}
+                        className="service-case-box"
+                      >
+                        <span className="case-box-text">{link.text}</span>
+                        <span className="case-box-arrow">&rarr;</span>
+                      </Link>
+                    ))}
                   </div>
                 )}
               </div>
@@ -171,7 +186,7 @@ export default function ServicesPage() {
             <div className="eyebrow">Large deal advisory</div>
             <h2 className="section-title">CRAFT for complex pursuits.</h2>
             <p className="lead">
-              For strategically important enterprise deals, LadderFrame uses CRAFT, its own pursuit method.
+              For strategically important enterprise deals, we use CRAFT, our own pursuit method for complex deals.
             </p>
           </div>
 

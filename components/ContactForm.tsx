@@ -30,18 +30,18 @@ const COUNTRY_CODES = [
 
 const ROLES = [
   'Founder / CEO',
-  'Leadership team',
+  'CXO / Leadership team',
+  'Business unit head',
   'Investor / Board',
-  'Other',
 ];
 
 const TOPICS = [
-  'Growth & revenue',
+  'Growth & revenue strategy',
   'Market expansion',
-  'A large deal',
-  'Operating model',
-  'AI & transformation',
-  'Profitability',
+  'A large deal pursuit',
+  'Operating model & organisation',
+  'AI & business transformation',
+  'Profitability & performance',
   'Something else',
 ];
 
@@ -160,7 +160,6 @@ export default function ContactForm() {
         <div id="form-view">
           <div className="card-head">
             <h2 id="form-title">Send a note</h2>
-            <p>We reply within one business day.</p>
           </div>
 
           <form onSubmit={handleSubmit} noValidate>
@@ -173,7 +172,7 @@ export default function ContactForm() {
                   type="text"
                   autoComplete="given-name"
                   required
-                  placeholder="Priya"
+                  placeholder="James"
                   value={formData.firstName}
                   onChange={(e) => handleChange('firstName', e.target.value)}
                   onBlur={() => handleBlur('firstName')}
@@ -189,7 +188,7 @@ export default function ContactForm() {
                   type="text"
                   autoComplete="family-name"
                   required
-                  placeholder="Menon"
+                  placeholder="Bond"
                   value={formData.lastName}
                   onChange={(e) => handleChange('lastName', e.target.value)}
                   onBlur={() => handleBlur('lastName')}
@@ -207,7 +206,7 @@ export default function ContactForm() {
                   type="email"
                   autoComplete="email"
                   required
-                  placeholder="name@company.com"
+                  placeholder="you@company.com"
                   value={formData.workEmail}
                   onChange={(e) => handleChange('workEmail', e.target.value)}
                   onBlur={() => handleBlur('workEmail')}
@@ -254,7 +253,7 @@ export default function ContactForm() {
 
               <div className="form-field-group">
                 <label htmlFor="topic">
-                  What’s on the table? <span className="opt-label">(optional)</span>
+                  What would you like to discuss? <span className="opt-label">(optional)</span>
                 </label>
                 <select
                   id="topic"
@@ -304,7 +303,7 @@ export default function ContactForm() {
             </div>
 
             <div className={`form-field-group ${errors.message ? 'bad' : ''}`}>
-              <label htmlFor="message">Message</label>
+              <label htmlFor="message">Anything else we should know?</label>
               <textarea
                 id="message"
                 name="message"

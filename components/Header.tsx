@@ -17,7 +17,6 @@ export default function Header() {
     { href: '/', label: 'Home' },
     { href: '/services', label: 'Services' },
     { href: '/about', label: 'About' },
-    { href: '/contact', label: 'Contact' },
   ];
 
   return (
@@ -58,7 +57,7 @@ export default function Header() {
           </nav>
           <div className="header-actions">
             <Link 
-              href="/contact#start" 
+              href="/contact" 
               className="btn btn-primary btn-pill"
               onClick={() => setMobileNavOpen(false)}
             >

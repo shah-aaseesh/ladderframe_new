@@ -1,22 +1,12 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import ClosingBand from '@/components/ClosingBand';
 
 export const metadata: Metadata = {
-  title: 'About — LadderFrame Advisors',
-  description: 'Advice from people who have run P&Ls, opened new regions and closed large deals. LadderFrame Advisors is a Mumbai-based advisory partnership.',
+  title: 'About Leadership & Track Record — LadderFrame Advisors',
+  description: 'Senior operating advisory led by Anurag Verulkar. 27+ years of experience scaling businesses, building business units, and closing large enterprise deals.',
 };
 
 export default function AboutPage() {
-  const leaders = [
-    {
-      name: 'Anurag Verulkar',
-      title: 'Founder & CEO',
-      bio: '27 years of sales and business experience at Bajaj, Cognizant, Ascendion and NTT, including opening new regions, building business units and scaling operations across India and APJ.',
-      linkedin: 'https://www.linkedin.com/in/anuragverulkar?originalSubdomain=in',
-    },
-  ];
-
   return (
     <>
       {/* 1. Hero */}
@@ -25,27 +15,12 @@ export default function AboutPage() {
           <div className="eyebrow">About</div>
           <h1>Experience from inside the <span>business.</span></h1>
           <p>
-            Advice from people who have run P&amp;Ls, opened new regions and closed large deals.
+            Advice from an operator who has run large P&amp;Ls, built new regions and service lines, and won complex deals.
           </p>
         </div>
       </section>
 
-      {/* 2. The firm */}
-      <section className="section white">
-        <div className="container about-intro-grid">
-          <div>
-            <div className="eyebrow">The firm</div>
-            <h2>Led by operators.</h2>
-          </div>
-          <div className="about-intro-copy">
-            <p>
-              LadderFrame Advisors is a Mumbai-based advisory partnership. Its leadership brings 27 years of sales and business experience at Bajaj, Cognizant, Ascendion and NTT, including opening new regions, building business units and scaling operations across India and APJ.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* 3. Leadership */}
+      {/* 2. Leadership */}
       <section className="section sand">
         <div className="container">
           <div className="section-header-block" style={{ marginBottom: '2rem' }}>
@@ -81,24 +56,20 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Right: Operating Track Record & Bio */}
+            {/* Right: Operating Credentials */}
             <div className="executive-profile-main">
-              <p className="executive-bio">
-                27 years of sales and business experience at Bajaj, Cognizant, Ascendion and NTT, including opening new regions, building business units and scaling operations across India and APJ.
-              </p>
-              
               <div className="executive-credentials-pills">
-                <span className="executive-cred-pill">27+ Years Leadership</span>
+                <span className="executive-cred-pill">27+ years in leadership</span>
                 <span className="executive-cred-pill">Bajaj · Cognizant · Ascendion · NTT</span>
-                <span className="executive-cred-pill">India &amp; APJ Regional Scale</span>
-                <span className="executive-cred-pill">P&amp;L &amp; Enterprise Growth</span>
+                <span className="executive-cred-pill">Scaled across India &amp; APJ</span>
+                <span className="executive-cred-pill">P&amp;L and enterprise growth</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 4. Closing band */}
+      {/* 3. Closing band */}
       <ClosingBand />
     </>
   );

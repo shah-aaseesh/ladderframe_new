@@ -23,6 +23,11 @@ export default function ScrollToHash() {
           top: offsetPosition,
           behavior: 'smooth',
         });
+
+        targetElement.classList.add('case-highlight-active');
+        setTimeout(() => {
+          targetElement.classList.remove('case-highlight-active');
+        }, 3600);
       }
     };
 

@@ -3,8 +3,8 @@ import Link from 'next/link';
 import ClosingBand from '@/components/ClosingBand';
 
 export const metadata: Metadata = {
-  title: 'LadderFrame Advisors — Advisory for the next phase of growth',
-  description: 'For CEOs and leadership teams making the decisions that growth now depends on: where to play, what to win and what to build.',
+  title: 'LadderFrame Advisors — Advisory for the Next Phase of Growth',
+  description: 'Advisory for leadership teams making critical growth decisions: market expansion, large deal pursuits, operating models, and business transformation.',
 };
 
 export default function HomePage() {
@@ -95,24 +95,28 @@ export default function HomePage() {
 
   const selectedWork = [
     {
+      id: 'case-pharma',
       sector: 'Pharma distribution',
       status: 'Completed',
       title: 'Forward integration into pharmacy retail',
       text: 'Retail acquisition and partner development. ₹2.65 Cr acquisition closed in 6 weeks; new pharma partners onboarded.',
     },
     {
+      id: 'case-it-services',
       sector: 'IT services · ~₹120 Cr',
       status: 'In progress',
       title: 'Growth & sales transformation',
       text: 'Sales engine, partner-led GTM and an AI-led proposition.',
     },
     {
+      id: 'case-agri-tech',
       sector: 'Agri-tech & rural impact',
       status: 'In progress',
       title: 'New business models & investor narrative',
       text: 'PMF, an integrated dairy ecosystem and fundraising.',
     },
     {
+      id: 'case-fractional',
       sector: 'Data & AI platform',
       status: 'In progress',
       title: 'Fractional growth leadership, India & APJ',
@@ -138,13 +142,13 @@ export default function HomePage() {
     },
     {
       step: '04',
-      title: 'Challenge & Coach',
+      title: 'Coach',
       text: 'Work with the people responsible.',
     },
     {
       step: '05',
-      title: 'Monitor & Course-correct',
-      text: 'Stay close as the plan plays out.',
+      title: 'Steer',
+      text: 'Stay close, and adjust as the plan plays out.',
     },
   ];
 
@@ -155,13 +159,12 @@ export default function HomePage() {
         <div className="container">
           <div className="hero-split-grid">
             <div className="hero-copy">
-              <div className="eyebrow">LadderFrame Advisors</div>
               <h1>Advisory for the next phase of <span>growth.</span></h1>
               <p>
-                For CEOs and leadership teams making the decisions that growth now depends on: where to play, what to win and what to build.
+                We help CEOs and leadership teams make the decisions that drive growth: where to play, how to win and what to build.
               </p>
               <div className="hero-actions-group">
-                <Link href="/contact#start" className="btn btn-primary">
+                <Link href="/contact" className="btn btn-primary">
                   Let’s Talk <span className="btn-arrow">&rarr;</span>
                 </Link>
               </div>
@@ -185,7 +188,7 @@ export default function HomePage() {
       <section className="section dark">
         <div className="container">
           <div className="section-header-block">
-            <h2 className="section-title">When the business changes, the questions change.</h2>
+            <h2 className="section-title">The questions we help leaders answer.</h2>
           </div>
 
           <div className="question-grid">
@@ -219,7 +222,7 @@ export default function HomePage() {
       <section className="section sand">
         <div className="container">
           <div className="section-header-block">
-            <h2 className="section-title">Leaders building what comes next.</h2>
+            <h2 className="section-title">The businesses we work with.</h2>
           </div>
 
           <div className="segment-grid">
@@ -234,11 +237,11 @@ export default function HomePage() {
       </section>
 
       {/* 4. Track record */}
-      <section className="proof-strip-section" aria-label="Founder’s operating track record">
+      <section className="proof-strip-section" aria-label="The founder’s track record">
         <div className="container">
           <div className="section-header-block" style={{ marginBottom: '2rem' }}>
-            <div className="eyebrow" style={{ color: 'var(--color-red-light)' }}>
-              Founder’s operating track record
+            <div className="eyebrow" style={{ color: 'var(--color-dark-text-muted)' }}>
+              The founder’s track record.
             </div>
           </div>
 
@@ -280,14 +283,14 @@ export default function HomePage() {
         <div className="container">
           <div className="section-header-block">
             <h2 className="section-title">Selected work</h2>
-            <p className="lead" style={{ fontSize: '0.95rem', fontStyle: 'italic' }}>
-              Note: Client names are anonymised.
+            <p style={{ fontSize: '0.875rem', color: 'var(--color-charcoal-muted)', marginTop: '0.4rem' }}>
+              Client names withheld for confidentiality.
             </p>
           </div>
 
           <div className="case-grid">
-            {selectedWork.map((cs, idx) => (
-              <div key={idx} className="case">
+            {selectedWork.map((cs) => (
+              <div key={cs.id} id={cs.id} className="case">
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem' }}>
                   <span className="meta" style={{ marginBottom: 0 }}>{cs.sector}</span>
                   <span 
