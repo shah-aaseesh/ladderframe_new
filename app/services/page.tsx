@@ -50,7 +50,12 @@ export default function ServicesPage() {
       label: '03 · Win',
       name: 'Large Deal Structuring & Pursuit',
       question: 'How do we win the deals that matter?',
-      caseLinks: [],
+      caseLinks: [
+        {
+          text: 'Case: IT services growth & enterprise sales transformation',
+          href: '/#case-it-services',
+        },
+      ],
       whatWeCover: 'Account intelligence, stakeholder mapping, Price-to-Win, proposition, Bid/No-Bid and pursuit governance using CRAFT.',
       whatYouGet: 'A focused pursuit, full stakeholder coverage and a deal your delivery team can honour.',
     },
@@ -59,7 +64,12 @@ export default function ServicesPage() {
       label: '04 · Build',
       name: 'Operating Model & Organisation',
       question: 'What has to change inside the business?',
-      caseLinks: [],
+      caseLinks: [
+        {
+          text: 'Case: IT services sales engine & GTM transformation',
+          href: '/#case-it-services',
+        },
+      ],
       whatWeCover: 'Operating model, structure, decision rights, management cadence, sales and pre-sales process, leadership and talent.',
       whatYouGet: 'Clear accountability and faster decisions.',
     },
@@ -82,7 +92,12 @@ export default function ServicesPage() {
       label: '06 · Perform',
       name: 'Profitability & Performance',
       question: 'How do we make growth pay?',
-      caseLinks: [],
+      caseLinks: [
+        {
+          text: 'Case: IT services growth & performance transformation',
+          href: '/#case-it-services',
+        },
+      ],
       whatWeCover: 'Pricing, margin, commercial terms, delivery economics, utilisation, cost-to-serve and portfolio economics.',
       whatYouGet: 'Clear economics, the right value levers and a rhythm for tracking them.',
     },
@@ -186,7 +201,7 @@ export default function ServicesPage() {
             <div className="eyebrow">Large deal advisory</div>
             <h2 className="section-title">CRAFT for complex pursuits.</h2>
             <p className="lead">
-              For strategically important enterprise deals, we use CRAFT, our own pursuit method for complex deals.
+              For strategically important enterprise deals, we use CRAFT &mdash; our structured pursuit method.
             </p>
           </div>
 

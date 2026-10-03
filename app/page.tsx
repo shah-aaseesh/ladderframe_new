@@ -85,7 +85,7 @@ export default function HomePage() {
     },
     {
       figure: '$5M–$200M',
-      caption: 'First-of-a-kind & strategic deals',
+      caption: 'Deal values across first-of-a-kind & strategic pursuits',
     },
     {
       figure: '50+ · $2B+',
@@ -103,7 +103,7 @@ export default function HomePage() {
     },
     {
       id: 'case-it-services',
-      sector: 'IT services · ~₹120 Cr',
+      sector: 'IT services · ~₹120 Cr portfolio',
       status: 'In progress',
       title: 'Growth & sales transformation',
       text: 'Sales engine, partner-led GTM and an AI-led proposition.',

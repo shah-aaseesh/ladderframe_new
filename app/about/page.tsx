@@ -38,9 +38,6 @@ export default function AboutPage() {
                   <div className="executive-role">
                     Founder &amp; CEO
                   </div>
-                  <div className="executive-org">
-                    LadderFrame Advisors
-                  </div>
                   <a 
                     href="https://www.linkedin.com/in/anuragverulkar?originalSubdomain=in"
                     target="_blank"

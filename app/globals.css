@@ -552,7 +552,7 @@ body {
    Home Page Hero (Architectural Split Layout)
    ========================================================================== */
 .hero-home {
-  padding: clamp(1.25rem, 2.5vw, 2.25rem) 0 clamp(2.5rem, 4vw, 3.75rem);
+  padding: clamp(2rem, 3.5vw, 3.25rem) 0 clamp(3rem, 5vw, 4.5rem);
   background-color: var(--color-bg-canvas);
   position: relative;
   overflow: hidden;
@@ -4480,7 +4480,155 @@ body {
   box-shadow: 0 6px 22px rgba(255, 30, 62, 0.45);
 }
 
+/* ==========================================================================
+   Page Hero (Services, About, Contact)
+   ========================================================================== */
+.page-hero {
+  padding: clamp(3rem, 5vw, 4.75rem) 0 clamp(2rem, 3.5vw, 3.25rem);
+  background-color: var(--color-bg-canvas);
+  position: relative;
+}
+
+.page-hero .eyebrow {
+  margin-bottom: 0.85rem;
+}
+
+.page-hero h1 {
+  font-family: var(--font-headline);
+  font-size: clamp(2.25rem, 4vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  color: var(--color-navy);
+  margin-bottom: 1.25rem;
+  max-width: 28ch;
+  text-wrap: balance;
+}
+
+.page-hero h1 span {
+  color: var(--color-red);
+}
+
+.page-hero p {
+  font-size: clamp(1.05rem, 1.3vw, 1.2rem);
+  line-height: 1.7;
+  color: var(--color-charcoal-muted);
+  max-width: 62ch;
+}
+
 /* 8. About Page Structures */
+.executive-profile-card {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border-divider);
+  border-radius: var(--radius-sm);
+  padding: clamp(2rem, 3.5vw, 3rem);
+  box-shadow: var(--shadow-card);
+  display: grid;
+  grid-template-columns: minmax(240px, 1fr) 1.5fr;
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .executive-profile-card {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1.75rem 1.25rem;
+  }
+}
+
+.executive-profile-sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid var(--color-border-subtle);
+  padding-right: clamp(1.5rem, 2.5vw, 2.5rem);
+}
+
+@media (max-width: 768px) {
+  .executive-profile-sidebar {
+    border-right: 0;
+    border-bottom: 1px solid var(--color-border-subtle);
+    padding-right: 0;
+    padding-bottom: 1.5rem;
+  }
+}
+
+.executive-name {
+  font-family: var(--font-headline);
+  font-size: clamp(1.65rem, 2.4vw, 2.15rem);
+  font-weight: 700;
+  color: var(--color-navy);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.35rem;
+}
+
+.executive-role {
+  font-family: var(--font-headline);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-charcoal-muted);
+  margin-bottom: 1.25rem;
+}
+
+.executive-linkedin-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-headline);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  background: var(--color-bg-sand);
+  border: 1px solid var(--color-border-strong);
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-xs);
+  text-decoration: none;
+  width: fit-content;
+  transition: all var(--transition-fast);
+}
+
+.executive-linkedin-btn:hover {
+  background: var(--color-navy);
+  color: #FFFFFF;
+  border-color: var(--color-navy);
+  transform: translateY(-1px);
+}
+
+.executive-credentials-pills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.85rem;
+}
+
+@media (max-width: 540px) {
+  .executive-credentials-pills {
+    grid-template-columns: 1fr;
+  }
+}
+
+.executive-cred-pill {
+  background: #FAF8F5;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-xs);
+  padding: 0.95rem 1.15rem;
+  font-family: var(--font-headline);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-charcoal);
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  transition: all var(--transition-fast);
+}
+
+.executive-cred-pill:hover {
+  background: #FFFFFF;
+  border-color: var(--color-navy);
+  box-shadow: var(--shadow-subtle);
+}
+
 .about-intro-grid {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
@@ -5085,24 +5233,25 @@ body {
 
 .contact-form-card form {
   display: grid;
-  gap: 14px;
+  gap: 16px;
 }
 
 .form-row-2col {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 14px;
+  gap: 16px;
 }
 
 @media (max-width: 540px) {
   .form-row-2col {
     grid-template-columns: 1fr;
+    gap: 14px;
   }
 }
 
 .form-field-group {
   display: grid;
-  gap: 5px;
+  gap: 6px;
   position: relative;
 }
 
@@ -5129,7 +5278,7 @@ body {
   background: #FAF8F5;
   border: 1px solid var(--color-border-strong);
   border-radius: var(--radius-xs);
-  padding: 10px 12px;
+  padding: 11px 13px;
   transition: all var(--transition-fast);
 }
 
@@ -5144,13 +5293,26 @@ body {
 
 .form-field-group textarea {
   resize: vertical;
-  min-height: 115px;
+  min-height: 125px;
 }
 
 .phone-input-split {
   display: grid;
   grid-template-columns: minmax(0, 160px) 1fr;
   gap: 8px;
+}
+
+@media (max-width: 480px) {
+  .phone-input-split {
+    grid-template-columns: minmax(0, 130px) 1fr;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 360px) {
+  .phone-input-split {
+    grid-template-columns: 1fr;
+  }
 }
 
 .form-field-group.bad input,
@@ -5191,7 +5353,7 @@ body {
   color: #FFFFFF;
   border: 0;
   border-radius: var(--radius-xs);
-  padding: 12px 28px;
+  padding: 13px 30px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
