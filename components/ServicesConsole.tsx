@@ -62,7 +62,7 @@ const CAPABILITIES: CapabilityItem[] = [
     focus: 'Operating model architecture, organisation structure, decision rights allocation and executive management cadence.',
     work: 'Sales/pre-sales processes, critical capabilities, leadership structure, accountability matrices and talent priorities.',
     outcome: 'Clearer accountability, faster decision cycles and an operating model aligned to sustain the next scale.',
-    evidence: 'Data & AI Platform Company — fractional growth leadership across India & APJ.',
+    evidence: 'Data & AI Platform Company — fractional growth leadership across India & APAC.',
     evidenceContext: 'Regional Scale Architecture',
   },
   {

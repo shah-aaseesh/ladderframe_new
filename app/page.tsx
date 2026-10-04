@@ -7,6 +7,108 @@ export const metadata: Metadata = {
   description: 'Advisory for leadership teams making critical growth decisions: market expansion, large deal pursuits, operating models, and business transformation.',
 };
 
+function getCapabilityIcon(idx: number) {
+  switch (idx) {
+    case 0:
+      return (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+          <polyline points="16 7 22 7 22 13" />
+        </svg>
+      );
+    case 1:
+      return (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="9" />
+          <line x1="3.6" y1="9" x2="20.4" y2="9" />
+          <line x1="3.6" y1="15" x2="20.4" y2="15" />
+          <path d="M11.5 3a17 17 0 0 0 0 18" />
+          <path d="M12.5 3a17 17 0 0 1 0 18" />
+        </svg>
+      );
+    case 2:
+      return (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          <polyline points="9 12 11 14 15 10" />
+        </svg>
+      );
+    case 3:
+      return (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <rect x="3" y="3" width="7" height="7" rx="1" />
+          <rect x="14" y="3" width="7" height="7" rx="1" />
+          <rect x="14" y="14" width="7" height="7" rx="1" />
+          <rect x="3" y="14" width="7" height="7" rx="1" />
+        </svg>
+      );
+    case 4:
+      return (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+          <circle cx="12" cy="12" r="3" />
+        </svg>
+      );
+    case 5:
+      return (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <line x1="18" y1="20" x2="18" y2="10" />
+          <line x1="12" y1="20" x2="12" y2="4" />
+          <line x1="6" y1="20" x2="6" y2="14" />
+          <line x1="2" y1="20" x2="22" y2="20" />
+        </svg>
+      );
+    default:
+      return null;
+  }
+}
+
+function getStepIcon(step: string) {
+  switch (step) {
+    case '01':
+      return (
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          <line x1="11" y1="8" x2="11" y2="14"/>
+          <line x1="8" y1="11" x2="14" y2="11"/>
+        </svg>
+      );
+    case '02':
+      return (
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <polygon points="12 2 19 21 12 17 5 21 12 2"/>
+        </svg>
+      );
+    case '03':
+      return (
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+          <path d="M2 17l10 5 10-5"/>
+          <path d="M2 12l10 5 10-5"/>
+        </svg>
+      );
+    case '04':
+      return (
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+      );
+    case '05':
+      return (
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/>
+          <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+        </svg>
+      );
+    default:
+      return null;
+  }
+}
+
 export default function HomePage() {
   const sixQuestions = [
     {
@@ -119,7 +221,7 @@ export default function HomePage() {
       id: 'case-fractional',
       sector: 'Data & AI platform',
       status: 'In progress',
-      title: 'Fractional growth leadership, India & APJ',
+      title: 'Fractional growth leadership, India & APAC',
       text: 'GTM, expansion, partnerships and the investor ecosystem.',
     },
   ];
@@ -205,7 +307,12 @@ export default function HomePage() {
                   cursor: 'pointer' 
                 }}
               >
-                <div className="num">{item.label}</div>
+                <div className="num" style={{ display: 'flex', alignItems: 'center', gap: '0.55rem' }}>
+                  <span style={{ color: 'var(--color-red-light)', display: 'inline-flex', alignItems: 'center' }}>
+                    {getCapabilityIcon(idx)}
+                  </span>
+                  <span>{item.label}</span>
+                </div>
                 <h3>{item.question}</h3>
                 <div style={{ marginTop: 'auto', paddingTop: '1rem' }}>
                   <span style={{ color: 'var(--color-red-light)', textDecoration: 'none', fontWeight: 500, fontSize: '0.95rem' }}>
@@ -324,7 +431,12 @@ export default function HomePage() {
           <div className="steps">
             {howWeEngage.map((st, idx) => (
               <div key={idx} className="step">
-                <div className="num">{st.step}</div>
+                <div className="num" style={{ display: 'flex', alignItems: 'center', gap: '0.45rem' }}>
+                  <span style={{ color: 'var(--color-red)', display: 'inline-flex', alignItems: 'center' }}>
+                    {getStepIcon(st.step)}
+                  </span>
+                  <span>{st.step}</span>
+                </div>
                 <h4>{st.title}</h4>
                 <p>{st.text}</p>
               </div>

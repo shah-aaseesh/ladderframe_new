@@ -7,6 +7,62 @@ export const metadata: Metadata = {
   description: 'Six connected advisory capabilities: Growth & revenue strategy, market expansion, large enterprise pursuits, operating models, AI transformation, and performance.',
 };
 
+function getCapabilityIcon(id: string) {
+  switch (id) {
+    case 'grow':
+      return (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+          <polyline points="16 7 22 7 22 13" />
+        </svg>
+      );
+    case 'expand':
+      return (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="9" />
+          <line x1="3.6" y1="9" x2="20.4" y2="9" />
+          <line x1="3.6" y1="15" x2="20.4" y2="15" />
+          <path d="M11.5 3a17 17 0 0 0 0 18" />
+          <path d="M12.5 3a17 17 0 0 1 0 18" />
+        </svg>
+      );
+    case 'win':
+      return (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          <polyline points="9 12 11 14 15 10" />
+        </svg>
+      );
+    case 'build':
+      return (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <rect x="3" y="3" width="7" height="7" rx="1" />
+          <rect x="14" y="3" width="7" height="7" rx="1" />
+          <rect x="14" y="14" width="7" height="7" rx="1" />
+          <rect x="3" y="14" width="7" height="7" rx="1" />
+        </svg>
+      );
+    case 'transform':
+      return (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+          <circle cx="12" cy="12" r="3" />
+        </svg>
+      );
+    case 'perform':
+      return (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <line x1="18" y1="20" x2="18" y2="10" />
+          <line x1="12" y1="20" x2="12" y2="4" />
+          <line x1="6" y1="20" x2="6" y2="14" />
+          <line x1="2" y1="20" x2="22" y2="20" />
+        </svg>
+      );
+    default:
+      return null;
+  }
+}
+
 export default function ServicesPage() {
   const capabilities = [
     {
@@ -156,7 +212,10 @@ export default function ServicesPage() {
                 style={{ '--card-idx': idx } as React.CSSProperties}
               >
                 <div className="service-dossier-head">
-                  <div className="service-dossier-code">{srv.label}</div>
+                  <div className="service-dossier-code">
+                    <span className="dossier-icon">{getCapabilityIcon(srv.id)}</span>
+                    <span>{srv.label}</span>
+                  </div>
                   <div>
                     <h2>{srv.name}</h2>
                     <div className="service-dossier-question">{srv.question}</div>
