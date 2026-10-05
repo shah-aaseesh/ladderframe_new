@@ -205,7 +205,7 @@ export default function HomePage() {
     },
     {
       id: 'case-it-services',
-      sector: 'IT services · ~₹120 Cr portfolio',
+      sector: 'IT services · ~₹120 Cr business',
       status: 'In progress',
       title: 'Growth & sales transformation',
       text: 'Sales engine, partner-led GTM and an AI-led proposition.',

@@ -112,7 +112,7 @@ export default function ServicesPage() {
           href: '/#case-it-services',
         },
       ],
-      whatWeCover: 'Account intelligence, stakeholder mapping, Price-to-Win, proposition, Bid/No-Bid and pursuit governance using CRAFT.',
+      whatWeCover: 'Account intelligence, stakeholder mapping, Bid/No-Bid, Price-to-Win, value proposition and pursuit governance using CRAFT.',
       whatYouGet: 'A focused pursuit, full stakeholder coverage and a deal your delivery team can honour.',
     },
     {
@@ -126,7 +126,7 @@ export default function ServicesPage() {
           href: '/#case-it-services',
         },
       ],
-      whatWeCover: 'Operating model, structure, decision rights, management cadence, sales and pre-sales process, leadership and talent.',
+      whatWeCover: 'Operating model, structure, decision rights, management cadence, sales & pre-sales, leadership & talent.',
       whatYouGet: 'Clear accountability and faster decisions.',
     },
     {

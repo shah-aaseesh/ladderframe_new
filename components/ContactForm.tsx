@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 const COUNTRY_CODES = [
   { name: 'India', code: '+91' },
@@ -46,6 +46,7 @@ const TOPICS = [
 ];
 
 export default function ContactForm() {
+  const containerRef = useRef<HTMLDivElement>(null);
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -126,8 +127,15 @@ export default function ContactForm() {
       // Form submission simulation / endpoint call
       await new Promise((resolve) => setTimeout(resolve, 600));
       setIsSubmitted(true);
-      if (typeof window !== 'undefined' && (window as unknown as { dataLayer?: unknown[] }).dataLayer) {
-        (window as unknown as { dataLayer: unknown[] }).dataLayer.push({ event: 'contact_form_sent' });
+      if (typeof window !== 'undefined') {
+        const dataLayer = (window as unknown as { dataLayer?: unknown[] }).dataLayer;
+        if (dataLayer) {
+          dataLayer.push({ event: 'contact_form_sent' });
+        }
+        // Smoothly scroll the card into view so the user immediately sees the confirmation
+        setTimeout(() => {
+          containerRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 50);
       }
     } catch {
       setAlertError("Your message wasn't sent. Please try again, or email anurag@ladderframe.in directly.");
@@ -155,7 +163,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="contact-form-card" aria-labelledby="form-title">
+    <div className="contact-form-card" ref={containerRef} aria-labelledby="form-title">
       {!isSubmitted ? (
         <div id="form-view">
           <div className="card-head">
@@ -348,15 +356,28 @@ export default function ContactForm() {
         </div>
       ) : (
         <div className="form-done-view" id="done-view">
+          <div className="form-done-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M20 6L9 17l-5-5" />
+            </svg>
+          </div>
+          <div className="form-done-badge">Enquiry Received</div>
           <h2>Message received.</h2>
-          <p>Thanks. We’ll reply within one business day.</p>
-          <button
-            type="button"
-            className="btn-again"
-            onClick={handleReset}
-          >
-            Send another message
-          </button>
+          <p className="form-done-lead">
+            Thank you for reaching out. We have received your note and will review the details promptly.
+          </p>
+          <p className="form-done-sub">
+            You can expect a direct response within <strong>one business day</strong>.
+          </p>
+          <div className="form-done-action">
+            <button
+              type="button"
+              className="btn btn-secondary btn-again"
+              onClick={handleReset}
+            >
+              Send another message <span className="btn-arrow">&rarr;</span>
+            </button>
+          </div>
         </div>
       )}
     </div>

@@ -146,7 +146,7 @@ body {
 
 /* Section Containers & Color Variations */
 .section {
-  padding: clamp(3.75rem, 6vw, 6rem) 0;
+  padding: clamp(2.5rem, 4.25vw, 4.25rem) 0;
   position: relative;
   width: 100%;
 }
@@ -184,7 +184,7 @@ body {
 /* Section Headers */
 .section-header-block {
   max-width: 840px;
-  margin-bottom: clamp(2.5rem, 4vw, 3.75rem);
+  margin-bottom: clamp(1.5rem, 2.5vw, 2.25rem);
 }
 
 .section-header-block.center {
@@ -552,7 +552,7 @@ body {
    Home Page Hero (Architectural Split Layout)
    ========================================================================== */
 .hero-home {
-  padding: clamp(2rem, 3.5vw, 3.25rem) 0 clamp(3rem, 5vw, 4.5rem);
+  padding: clamp(1.5rem, 2.5vw, 2.5rem) 0 clamp(2rem, 3.5vw, 3rem);
   background-color: var(--color-bg-canvas);
   position: relative;
   overflow: hidden;
@@ -818,7 +818,7 @@ body {
    Operating Proof Strip (Deep Executive Navy Band)
    ========================================================================== */
 .proof-strip-section {
-  padding: clamp(2.5rem, 4vw, 3.25rem) 0;
+  padding: clamp(1.75rem, 2.75vw, 2.35rem) 0;
   background-color: var(--color-bg-dark);
   color: #FFFFFF;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
@@ -963,11 +963,11 @@ body {
   grid-template-columns: repeat(4, 1fr);
   border-top: 1px solid var(--color-border-strong);
   border-bottom: 1px solid var(--color-border-strong);
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
 }
 
 .segment-col {
-  padding: 2.5rem 2rem 2.5rem 2rem;
+  padding: 1.75rem 1.5rem;
   border-right: 1px solid var(--color-border-divider);
   display: flex;
   flex-direction: column;
@@ -1074,7 +1074,7 @@ body {
   flex-direction: column;
   border-top: 1px solid rgba(255, 255, 255, 0.16);
   border-bottom: 1px solid rgba(255, 255, 255, 0.16);
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
 }
 
 .inflection-row {
@@ -1082,7 +1082,7 @@ body {
   grid-template-columns: 220px 1.15fr 1.6fr;
   gap: 2.5rem;
   align-items: baseline;
-  padding: 2rem clamp(1rem, 2vw, 1.5rem);
+  padding: 1.35rem clamp(0.75rem, 1.5vw, 1.25rem);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   position: relative;
   transition: all var(--transition-fast);
@@ -1183,13 +1183,13 @@ body {
   grid-template-columns: repeat(3, 1fr);
   border-top: 1px solid rgba(255, 255, 255, 0.16);
   border-left: 1px solid rgba(255, 255, 255, 0.16);
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
 }
 
 .cap-cell {
   border-right: 1px solid rgba(255, 255, 255, 0.12);
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  padding: clamp(2.25rem, 3.5vw, 3rem) clamp(1.75rem, 2.5vw, 2.5rem);
+  padding: clamp(1.65rem, 2.5vw, 2.25rem) clamp(1.35rem, 2vw, 1.85rem);
   display: flex;
   flex-direction: column;
   position: relative;
@@ -1269,15 +1269,15 @@ body {
 .case-dossier-layout {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  margin-top: 2.5rem;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
 }
 
 /* Primary Featured Case Study Dossier */
 .case-hero-dossier {
   border-top: 2px solid var(--color-navy);
   border-bottom: 1px solid var(--color-border-divider);
-  padding: 2.75rem 0;
+  padding: 1.85rem 0;
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: clamp(2rem, 4vw, 4.5rem);
@@ -1365,7 +1365,7 @@ body {
 }
 
 .case-strip-item {
-  padding: 2.25rem 2rem 2.25rem 2rem;
+  padding: 1.65rem 1.5rem;
   border-right: 1px solid var(--color-border-divider);
   display: flex;
   flex-direction: column;
@@ -1441,7 +1441,7 @@ body {
    Replaces flimsy stepper rail with an authoritative architectural blueprint board
    ========================================================================== */
 .advisory-cadence-board {
-  margin-top: 3rem;
+  margin-top: 1.75rem;
   display: flex;
   flex-direction: column;
 }
@@ -1454,7 +1454,7 @@ body {
 }
 
 .cadence-col {
-  padding: 2.75rem 1.65rem 2.5rem 1.65rem;
+  padding: 1.85rem 1.35rem 1.65rem 1.35rem;
   border-right: 1px solid var(--color-border-divider);
   display: flex;
   flex-direction: column;
@@ -1568,8 +1568,8 @@ body {
 
 /* Bottom Cadence Commitment Ribbon */
 .cadence-commitment-ribbon {
-  margin-top: 2.25rem;
-  padding: 1.6rem 2.25rem;
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.75rem;
   background: var(--color-bg-white);
   border: 1px solid var(--color-border-divider);
   border-radius: var(--radius-sm);
@@ -1658,7 +1658,7 @@ body {
    Executive Conversion CTA Section (Dark Background)
    ========================================================================== */
 .section-cta {
-  padding: clamp(4.5rem, 6.5vw, 6rem) 0;
+  padding: clamp(3rem, 4.5vw, 4.25rem) 0;
   background-color: var(--color-bg-dark);
   color: #FFFFFF;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
@@ -1723,24 +1723,26 @@ body {
    Page Hero (Services, About, Contact)
    ========================================================================== */
 .page-hero {
-  padding: clamp(3.5rem, 5.5vw, 5rem) 0 clamp(2.5rem, 4vw, 3.5rem);
+  padding: clamp(2.25rem, 3.75vw, 3.25rem) 0 clamp(1.75rem, 2.75vw, 2.5rem);
   border-bottom: 1px solid var(--color-border-subtle);
-  background-color: var(--color-bg-white);
+  background-color: var(--color-bg-canvas);
+  position: relative;
 }
 
 .page-hero .eyebrow {
   color: var(--color-charcoal-muted);
+  margin-bottom: 0.85rem;
 }
 
 .page-hero h1 {
   font-family: var(--font-headline);
-  font-size: clamp(2.35rem, 4vw, 3.5rem);
-  font-weight: 650;
-  line-height: 1.15;
+  font-size: clamp(2.25rem, 4.2vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.12;
   letter-spacing: -0.025em;
   color: var(--color-navy);
-  margin-bottom: 1.25rem;
-  max-width: 24ch;
+  margin-bottom: 1.15rem;
+  max-width: 32ch;
   text-wrap: balance;
 }
 
@@ -1749,10 +1751,11 @@ body {
 }
 
 .page-hero p {
-  font-size: clamp(1.1rem, 1.35vw, 1.225rem);
+  font-size: clamp(1.05rem, 1.3vw, 1.2rem);
   line-height: 1.7;
   color: var(--color-charcoal-muted);
-  max-width: 72ch;
+  max-width: 82ch;
+  text-wrap: pretty;
 }
 
 /* ==========================================================================
@@ -4484,9 +4487,10 @@ body {
    Page Hero (Services, About, Contact)
    ========================================================================== */
 .page-hero {
-  padding: clamp(3rem, 5vw, 4.75rem) 0 clamp(2rem, 3.5vw, 3.25rem);
+  padding: clamp(2.25rem, 3.75vw, 3.25rem) 0 clamp(1.75rem, 2.75vw, 2.5rem);
   background-color: var(--color-bg-canvas);
   position: relative;
+  border-bottom: 1px solid var(--color-border-subtle);
 }
 
 .page-hero .eyebrow {
@@ -4495,13 +4499,13 @@ body {
 
 .page-hero h1 {
   font-family: var(--font-headline);
-  font-size: clamp(2.25rem, 4vw, 3.5rem);
+  font-size: clamp(2.25rem, 4.2vw, 3.5rem);
   font-weight: 700;
   line-height: 1.12;
   letter-spacing: -0.025em;
   color: var(--color-navy);
-  margin-bottom: 1.25rem;
-  max-width: 28ch;
+  margin-bottom: 1.15rem;
+  max-width: 32ch;
   text-wrap: balance;
 }
 
@@ -4513,7 +4517,8 @@ body {
   font-size: clamp(1.05rem, 1.3vw, 1.2rem);
   line-height: 1.7;
   color: var(--color-charcoal-muted);
-  max-width: 62ch;
+  max-width: 82ch;
+  text-wrap: pretty;
 }
 
 /* 8. About Page Structures */
@@ -4839,7 +4844,7 @@ body {
 /* 9. Services Page Structures (Clean Sequential Capability Dossiers) */
 .services-stack-section {
   position: relative;
-  padding: clamp(2.5rem, 4.5vw, 4.5rem) 0;
+  padding: clamp(2.5rem, 4.25vw, 4.25rem) 0;
 }
 
 .capabilities-stack-deck {
@@ -5130,7 +5135,7 @@ body {
 /* 10. Contact Page Structures (Aligned with contact-form.html layout & current site design tokens) */
 .contact-page-wrapper {
   width: 100%;
-  padding-block: clamp(2.5rem, 5vw, 4.5rem);
+  padding-block: clamp(2.25rem, 3.75vw, 3.25rem);
 }
 
 .contact-editorial-wrap {
@@ -5158,12 +5163,12 @@ body {
 
 .contact-main-heading {
   font-family: var(--font-headline);
-  font-size: clamp(2.25rem, 4.2vw, 3.4rem);
-  font-weight: 650;
-  line-height: 1.08;
-  letter-spacing: -0.02em;
+  font-size: clamp(2.25rem, 4.2vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
   color: var(--color-navy);
-  margin: 0 0 1rem;
+  margin: 0 0 1.15rem;
   text-wrap: balance;
 }
 
@@ -5174,11 +5179,11 @@ body {
 }
 
 .contact-lede {
-  font-size: 1.0625rem;
+  font-size: clamp(1.05rem, 1.3vw, 1.2rem);
   color: var(--color-charcoal-muted);
-  max-width: 38ch;
+  max-width: 42ch;
   margin: 0 0 2rem;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 /* Direct Channels Table (Clean ledger style) */
@@ -5501,40 +5506,95 @@ body {
 }
 
 .form-done-view {
-  text-align: left;
-  padding: 1.5rem 0 0.5rem;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 480px;
+  animation: heroFadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.form-done-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(5, 150, 105, 0.1);
+  color: #059669;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 0 0 8px rgba(5, 150, 105, 0.05);
+}
+
+.form-done-badge {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 750;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #059669;
+  background: rgba(5, 150, 105, 0.08);
+  padding: 4px 12px;
+  border-radius: 100px;
+  margin-bottom: 0.85rem;
 }
 
 .form-done-view h2 {
   font-family: var(--font-headline);
-  color: #059669;
-  font-size: 1.4rem;
-  font-weight: 650;
-  margin: 0 0 0.5rem;
+  color: var(--color-navy);
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.75rem;
 }
 
-.form-done-view p {
+.form-done-lead {
+  color: var(--color-charcoal);
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 42ch;
+}
+
+.form-done-sub {
   color: var(--color-charcoal-muted);
-  margin: 0 0 1.25rem;
+  margin: 0 0 2rem;
   font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.form-done-sub strong {
+  color: var(--color-navy);
+  font-weight: 600;
+}
+
+.form-done-action {
+  margin-top: 0.5rem;
 }
 
 .form-done-view .btn-again {
   font-family: var(--font-body);
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   font-weight: 600;
   border: 1px solid var(--color-border-strong);
   background: #FFFFFF;
   color: var(--color-navy);
   border-radius: var(--radius-xs);
-  padding: 7px 12px;
+  padding: 10px 20px;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   transition: all var(--transition-fast);
 }
 
 .form-done-view .btn-again:hover {
   border-color: var(--color-navy);
   background: var(--color-bg-sand);
+  transform: translateY(-1px);
 }
 
 .alert-error {

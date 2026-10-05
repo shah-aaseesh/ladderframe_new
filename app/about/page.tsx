@@ -20,14 +20,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 2. Leadership */}
+      {/* 2. Executive Profile */}
       <section className="section sand">
         <div className="container">
-          <div className="section-header-block" style={{ marginBottom: '2.5rem' }}>
-            <div className="eyebrow">Leadership</div>
-            <h2 className="section-title">Executive Profile</h2>
-          </div>
-
           <div className="executive-profile-card">
             {/* Left: Portrait, Identity & LinkedIn */}
             <div className="executive-profile-sidebar">
