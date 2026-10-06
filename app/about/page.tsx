@@ -28,7 +28,7 @@ export default function AboutPage() {
             <div className="executive-profile-sidebar">
               <div className="executive-photo-wrap">
                 <img
-                  src="/assets/Anurag Verulkar.jpeg"
+                  src="/assets/anurag-verulkar.jpeg"
                   alt="Anurag Verulkar — Founder & CEO, LadderFrame Advisors"
                   className="executive-photo"
                 />
